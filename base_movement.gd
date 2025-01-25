@@ -1,7 +1,7 @@
 extends CSGBox3D  # Root node
 
 # Variables for rotation control
-@export var sensitivity: float = 0.2  # Sensitivity of mouse movement
+@export var sensitivity: float = 0.08  # Sensitivity of mouse movement
 @export var max_tilt_angle: float = 45.0  # Maximum tilt angle in degrees
 # To track current tilt angles
 var tilt_x: float = 0.0
