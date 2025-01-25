@@ -3,16 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://y7dsnl4c14pf" path="res://wall.tscn" id="1_gfc40"]
 [ext_resource type="PackedScene" uid="uid://bb7oauwmbmeu" path="res://step.tscn" id="3_fv5xo"]
 [ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://ball.tscn" id="3_hgpc2"]
-[ext_resource type="PackedScene" path="res://groundplane.tscn" id="4_5c3jh"]
+[ext_resource type="PackedScene" uid="uid://c7g7odqucpoyi" path="res://groundplane.tscn" id="4_5c3jh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3u0fs"]
 
 [node name="Welt" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00136614, -0.00259185, 0.000978172)
 
 [node name="Wall_left" type="Node" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.973829, 0.22728, 0, -0.22728, 0.973829, 0.0862003, 2.42286, 5.35324)
+transform = Transform3D(1, 0, 0, 0, 0.973829, 0.22728, 0, -0.22728, 0.973829, 0.0862003, 3.48294, 4.72306)
 fov = 57.8
 near = 0.029
 
@@ -27,6 +28,94 @@ material = SubResource("StandardMaterial3D_3u0fs")
 transform = Transform3D(-0.402463, 0, -1.55975e-08, 0, -0.840259, 0, 8.69011e-08, 0, -0.440663, 1.17727, -22.202, -2.27217)
 skeleton = NodePath("../..")
 
+[node name="step2" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.363314, 0, -1.55975e-08, 0, -1.80987, 0, 7.84479e-08, 0, -0.440663, 1.17807, -21.0904, -1.85546)
+skeleton = NodePath("../..")
+
+[node name="step3" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.363314, 0, -1.55975e-08, 0, -1.80987, 0, 7.84479e-08, 0, -0.440663, 1.17807, -20.5033, -1.47251)
+skeleton = NodePath("../..")
+
+[node name="step4" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.360931, -0.000580904, -4.64473e-05, 0.000189935, -1.10174, 0.00447882, 3.81736e-05, -0.0106753, -0.462234, 1.1719, -20.2481, -1.07615)
+skeleton = NodePath("../..")
+
+[node name="step5" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.360931, -0.000580904, -4.64473e-05, 0.000189935, -1.10174, 0.00447882, 3.81736e-05, -0.0106753, -0.462234, 1.1719, -19.8286, -0.664946)
+skeleton = NodePath("../..")
+
+[node name="step12" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.360931, -0.000580904, -4.64473e-05, 0.000189935, -1.10174, 0.00447882, 3.81736e-05, -0.0106753, -0.462234, 1.1719, -19.3298, 0.575964)
+skeleton = NodePath("../..")
+
+[node name="step13" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.361963, -0.000765707, -0.000105866, 0.000190478, -1.45224, 0.0102085, 3.82828e-05, -0.0140714, -1.05356, 1.1719, -18.5062, 1.28931)
+skeleton = NodePath("../..")
+
+[node name="step14" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.36216, -0.000811946, -0.000131574, 0.000190581, -1.53993, 0.0126874, 3.83036e-05, -0.0149211, -1.30939, 1.16523, -17.2324, 2.41408)
+skeleton = NodePath("../..")
+
+[node name="step15" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.36216, -0.000811946, -0.000131574, 0.000190581, -1.53993, 0.0126874, 3.83036e-05, -0.0149211, -1.30939, 0.827214, -16.3744, 2.41408)
+skeleton = NodePath("../..")
+
+[node name="step16" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.36216, -0.000811946, -0.000131574, 0.000190581, -1.53993, 0.0126874, 3.83036e-05, -0.0149211, -1.30939, 0.615162, -15.0301, 2.41691)
+skeleton = NodePath("../..")
+
+[node name="step17" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.36216, -0.000811946, -0.000131574, 0.000190581, -1.53993, 0.0126874, 3.83036e-05, -0.0149211, -1.30939, 0.318987, -14.0106, 2.41691)
+skeleton = NodePath("../..")
+
+[node name="step18" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.36216, -0.000811946, -0.000131574, 0.000190581, -1.53993, 0.0126874, 3.83036e-05, -0.0149211, -1.30939, 0.0701266, -12.7228, 2.41691)
+skeleton = NodePath("../..")
+
+[node name="step19" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.36216, -0.000811946, -0.000131574, 0.000190581, -1.53993, 0.0126874, 3.83036e-05, -0.0149211, -1.30939, -0.219162, -11.6369, 2.41691)
+skeleton = NodePath("../..")
+
+[node name="step20" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.36216, -0.000811946, -0.000131574, 0.000190581, -1.53993, 0.0126874, 3.83036e-05, -0.0149211, -1.30939, -0.552554, -11.6369, 2.41691)
+skeleton = NodePath("../..")
+
+[node name="step22" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.36216, -0.000811946, -0.000131574, 0.000190581, -1.53993, 0.0126874, 3.83036e-05, -0.0149211, -1.30939, -0.101473, -10.5485, -1.42556)
+skeleton = NodePath("../..")
+
+[node name="step23" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.36216, -0.000811946, -0.000131574, 0.000190581, -1.53993, 0.0126874, 3.83036e-05, -0.0149211, -1.30939, 0.221083, -9.68196, -1.42556)
+skeleton = NodePath("../..")
+
+[node name="step21" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.36168, -0.00122733, -0.000404624, 0.000190329, -2.32774, 0.039017, 3.82528e-05, -0.0225545, -4.02673, -0.384136, -10.7007, -0.109456)
+skeleton = NodePath("../..")
+
+[node name="step8" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.360931, -0.000580904, -4.64473e-05, 0.000189935, -1.10174, 0.00447882, 3.81736e-05, -0.0106753, -0.462234, -1.1169, -19.8286, -0.244972)
+skeleton = NodePath("../..")
+
+[node name="step9" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.360931, -0.000580904, -4.64473e-05, 0.000189935, -1.10174, 0.00447882, 3.81736e-05, -0.0106753, -0.462234, -1.1169, -19.0034, -0.690416)
+skeleton = NodePath("../..")
+
+[node name="step11" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.360931, -0.000580904, -4.64473e-05, 0.000189935, -1.10174, 0.00447882, 3.81736e-05, -0.0106753, -0.462234, -1.1169, -17.5977, -1.64326)
+skeleton = NodePath("../..")
+
+[node name="step10" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.361533, -0.000688764, -8.11271e-05, 0.000190252, -1.30631, 0.00782292, 3.82373e-05, -0.0126574, -0.80736, -1.1169, -18.1073, -1.03296)
+skeleton = NodePath("../..")
+
+[node name="step7" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-3.13033, -0.000580965, -4.64547e-05, 0.00164729, -1.10186, 0.00447953, 0.000331077, -0.0106764, -0.462308, 0.152889, -19.8286, 0.187696)
+skeleton = NodePath("../..")
+
+[node name="step6" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.358497, 0.00185646, 0.107688, 0.000193629, -1.11182, 0.00463251, -0.0828773, -0.010628, -0.46581, 1.14298, -19.8286, -0.218)
+skeleton = NodePath("../..")
+
 [node name="Node3D-test" parent="Groundplane" instance=ExtResource("1_gfc40")]
 transform = Transform3D(-0.33233, -0.000433821, 6.06084e-05, 0.0137405, -10.5263, -0.00394748, -0.000150046, 0.000307636, -0.820816, 1.40241, 0.0785349, 0.303246)
 
@@ -38,7 +127,7 @@ transform = Transform3D(6.07648e-05, -0.000124555, 0.332331, 0.0137405, -10.5263
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.552053, 0.623752, -0.553326, 0, 0.663613, 0.748076, 0.833809, -0.412978, 0.36635, -7.06359, 9.9116, 2.61527)
-light_color = Color(0.871752, 0.625096, 0, 1)
+light_color = Color(0.705882, 0.823529, 0.905882, 1)
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.855002, -0.38797, 0.344166, 2.08449e-10, 0.663613, 0.748076, -0.518624, -0.639607, 0.567391, 5.43063, 9.9116, 2.61527)
