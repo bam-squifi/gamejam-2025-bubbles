@@ -1,18 +1,22 @@
-extends Node3D  # Ensure the base class is correct
+extends CSGBox3D  # Root node
 
-# Exported variables for tuning tilt parameters in the editor
-@export var tilt_speed: float = 2.0
-@export var max_tilt_angle: float = 45.0
+# Variables for rotation control
+@export var sensitivity: float = 0.2  # Sensitivity of mouse movement
+@export var max_tilt_angle: float = 45.0  # Maximum tilt angle in degrees
+# To track current tilt angles
+var tilt_x: float = 0.0
+var tilt_z: float = 0.0
 
-@onready var csg_box: CSGBox3D = $CSGBox3D
-@onready var plane_body: StaticBody3D = $StaticBody3D
+func _input(event: InputEvent):
+	if event is InputEventMouseMotion:
+		# Map mouse motion to tilt
+		tilt_x -= event.relative.y * sensitivity  # Mouse Y controls pitch (X-axis rotation)
+		tilt_z += event.relative.x * sensitivity  # Mouse X controls roll (Z-axis rotation)
 
-func _process(delta: float):
-	# Read input
-	#print("Key pressed" + Input.get_action_strength("plane_left"))
-	var tilt_x = Input.get_action_strength("plane_down") - Input.get_action_strength("plane_up")
-	var tilt_z = Input.get_action_strength("plane_right") - Input.get_action_strength("plane_left")
+		# Clamp tilt angles to the max tilt angle
+		tilt_x = clamp(tilt_x, -max_tilt_angle, max_tilt_angle)
+		tilt_z = clamp(tilt_z, -max_tilt_angle, max_tilt_angle)
 
-	# Calculate new tilt angles
-	var new_tilt_x = clamp(tilt_x * tilt_speed, -max_tilt_angle, max_tilt_angle)
-	var new_tilt_z = clamp(tilt_z * tilt_speed, -max_tilt_angle, max_tilt_angle)
+		# Apply rotation to the CSGBox3D
+		self.rotation_degrees.x = tilt_x
+		self.rotation_degrees.z = tilt_z
