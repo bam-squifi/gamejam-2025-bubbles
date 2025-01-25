@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://w0jayfege6gc"]
+[gd_scene load_steps=6 format=3 uid="uid://w0jayfege6gc"]
 
 [ext_resource type="Shader" path="res://bubble.gdshader" id="1_awtih"]
 
@@ -14,16 +14,22 @@ shader_parameter/wobble_intensity = 5.0
 shader_parameter/uv_offset_speed = Vector2(0.1, 0.1)
 shader_parameter/distortion_amount = 0.2
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1yuqd"]
+friction = 0.0
+bounce = 0.5
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_rnkhs"]
 
 [node name="SoapBubble" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 mesh = SubResource("SphereMesh_nkn8x")
 surface_material_override/0 = SubResource("ShaderMaterial_evare")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="MeshInstance3D"]
-mass = 0.001
+mass = 0.011
+physics_material_override = SubResource("PhysicsMaterial_1yuqd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/RigidBody3D"]
 shape = SubResource("SphereShape3D_rnkhs")

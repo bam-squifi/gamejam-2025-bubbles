@@ -1,6 +1,6 @@
 shader_type spatial;
 
-uniform vec4 base_color = vec4(0.3,.5,.8,.1);
+uniform vec4 base_color = vec4(0.3,.5,.8,.01);
 uniform float wobble_strength: hint_range(0.01, 0.05, 0.01) = 0.01;
 uniform float wobble_speed: hint_range(1.0, 2.0, 0.2) = 2.0;
 uniform float wobble_intensity: hint_range(1.0, 5.0, 0.25) = 4.0;
@@ -16,15 +16,15 @@ void fragment() {
 	
 	vec3 view_dir = normalize(VIEW);
 	float angle = dot(NORMAL, view_dir);
-	float iridescence = pow(abs(angle), 1.0);
+	float iridescence = pow(abs(angle), 2.0);
 	
-	vec2 uv_distorted = UV + sin(TIME * uv_offset_speed + UV * 10.) * distortion_amount;
-	vec3 rainbow = vec3(sin(uv_distorted.x * 5.0), sin(uv_distorted.y * 10.0), cos(uv_distorted.x * uv_distorted.y * 1.0));
+	vec2 uv_distorted = UV + sin(TIME * uv_offset_speed + UV * 20.) * distortion_amount;
+	vec3 rainbow = vec3(sin(uv_distorted.x * 1.0), sin(uv_distorted.y * 1.0), cos(uv_distorted.x * uv_distorted.y * 2.0));
 	rainbow = mix(vec3(1.0), normalize(rainbow), iridescence);
 	
 	vec3 final_color = mix(base_color.rgb, rainbow, iridescence);
 	
-	ALBEDO = base_color.rgb;
+	ALBEDO = final_color;
 	ALPHA = base_color.a;
 	SPECULAR = 0.8;
 	ROUGHNESS = .2;
