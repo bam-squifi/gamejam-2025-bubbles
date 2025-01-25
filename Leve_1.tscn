@@ -1,28 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://pylim5r3d7d0"]
+[gd_scene load_steps=6 format=3 uid="uid://pylim5r3d7d0"]
 
 [ext_resource type="PackedScene" uid="uid://y7dsnl4c14pf" path="res://wall.tscn" id="1_gfc40"]
 [ext_resource type="PackedScene" uid="uid://bb7oauwmbmeu" path="res://step.tscn" id="3_fv5xo"]
 [ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://ball.tscn" id="3_hgpc2"]
 [ext_resource type="PackedScene" path="res://groundplane.tscn" id="4_5c3jh"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3u0fs"]
+
 [node name="Welt" type="Node3D"]
 
 [node name="Wall_left" type="Node" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.973829, 0.22728, 0, -0.22728, 0.973829, 0.0862003, 2.42286, 3.28746)
+transform = Transform3D(1, 0, 0, 0, 0.973829, 0.22728, 0, -0.22728, 0.973829, 0.0862003, 2.42286, 5.35324)
 fov = 57.8
 near = 0.029
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.44074, 0.87638, -0.194184, -0.474765, -0.0439963, 0.879012, 0.761805, 0.479607, 0.435466, -2.1985, 4.78192, 3.13515)
-light_energy = 1.821
 
 [node name="Ball" parent="." instance=ExtResource("3_hgpc2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.01124, 2.34542, 0.568979)
 
 [node name="Groundplane" parent="." instance=ExtResource("4_5c3jh")]
 transform = Transform3D(-3.00905, 0, 1.06507e-07, 0, -0.095, 0, -2.6306e-07, 0, -1.2183, 0.102246, 0.00746105, -2.33655)
+material = SubResource("StandardMaterial3D_3u0fs")
 
 [node name="step" parent="Groundplane" instance=ExtResource("3_fv5xo")]
 transform = Transform3D(-0.402463, 0, -1.55975e-08, 0, -0.840259, 0, 8.69011e-08, 0, -0.440663, 1.17727, -22.202, -2.27217)
@@ -36,3 +35,11 @@ transform = Transform3D(-0.33233, -0.000433821, 6.06084e-05, 0.0137405, -10.5263
 
 [node name="Node3D-test3" parent="Groundplane" instance=ExtResource("1_gfc40")]
 transform = Transform3D(6.07648e-05, -0.000124555, 0.332331, 0.0137405, -10.5263, -0.00394748, -0.820815, -0.00107148, 0.000149731, 0.0594103, 0.0785349, 3.25215)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.552053, 0.623752, -0.553326, 0, 0.663613, 0.748076, 0.833809, -0.412978, 0.36635, -7.06359, 9.9116, 2.61527)
+light_color = Color(0.871752, 0.625096, 0, 1)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.855002, -0.38797, 0.344166, 2.08449e-10, 0.663613, 0.748076, -0.518624, -0.639607, 0.567391, 5.43063, 9.9116, 2.61527)
+light_color = Color(0.705538, 0.822429, 0.905765, 1)
