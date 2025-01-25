@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7g7odqucpoyi"]
+
+[ext_resource type="Script" path="res://base_movement.gd" id="1_hutkm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lqoaq"]
+size = Vector3(3.3866, 1, 6.72296)
+
+[node name="Groundplane" type="CSGBox3D"]
+transform = Transform3D(-2.00641, 0, 1.06507e-07, 0, -0.095, 0, -1.75406e-07, 0, -1.2183, 0.173638, 0.00746105, -2.92801)
+size = Vector3(3.53174, 0.918945, 6.77008)
+script = ExtResource("1_hutkm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 4.26326e-13, 0, 1, 0, 0, 0, 1, -0.0717163, 0, -0.0164499)
+shape = SubResource("BoxShape3D_lqoaq")
