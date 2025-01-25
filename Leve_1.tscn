@@ -1,42 +1,38 @@
-[gd_scene load_steps=4 format=3 uid="uid://pylim5r3d7d0"]
+[gd_scene load_steps=5 format=3 uid="uid://pylim5r3d7d0"]
 
 [ext_resource type="Script" path="res://base_movement.gd" id="1_8h61v"]
 [ext_resource type="PackedScene" uid="uid://y7dsnl4c14pf" path="res://wall.tscn" id="1_gfc40"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_dcd7w"]
+[ext_resource type="PackedScene" uid="uid://bb7oauwmbmeu" path="res://step.tscn" id="3_fv5xo"]
+[ext_resource type="PackedScene" path="res://ball.tscn" id="3_hgpc2"]
 
 [node name="Welt" type="Node3D"]
 
 [node name="Wall_left" type="Node" parent="."]
-
-[node name="Node3D-test" parent="Wall_left" instance=ExtResource("1_gfc40")]
-
-[node name="Node3D-test2" parent="Wall_left" instance=ExtResource("1_gfc40")]
-transform = Transform3D(0.999999, 0.00130539, -0.000182461, -0.00130535, 0.999999, 0.000375011, 0.000182888, -0.000374793, 1, 4.0961, 2.38419e-07, -2.706)
-
-[node name="Node3D-test3" parent="Wall_left" instance=ExtResource("1_gfc40")]
-transform = Transform3D(-0.000182932, 0.000374793, -1, -0.00130535, 0.999999, 0.000375011, 0.999999, 0.00130539, -0.000182505, -0.0765221, 2.38419e-07, -6.29865)
 
 [node name="Groundplane" type="CSGBox3D" parent="."]
 transform = Transform3D(-2.5116, 0, 1.06699e-07, 0, -0.095171, 0, -2.19571e-07, 0, -1.22049, 0.161287, -0.00480056, -2.91855)
 size = Vector3(3.53174, 0.918945, 6.77008)
 script = ExtResource("1_8h61v")
 
+[node name="step" parent="Groundplane" instance=ExtResource("3_fv5xo")]
+transform = Transform3D(-0.482175, 0, -1.86868e-08, 0, -0.83875, 0, 8.6745e-08, 0, -0.439872, 1.43395, -22.2909, -2.74495)
+skeleton = NodePath("../..")
+
+[node name="Node3D-test" parent="Groundplane" instance=ExtResource("1_gfc40")]
+transform = Transform3D(-0.398152, -0.000519744, 7.26125e-05, 0.0137158, -10.5074, -0.00394039, -0.000149776, 0.000307084, -0.819341, 1.70369, -0.050444, -0.174154)
+
+[node name="Node3D-test2" parent="Groundplane" instance=ExtResource("1_gfc40")]
+transform = Transform3D(-0.398152, -0.000519744, 7.26125e-05, 0.0137158, -10.5074, -0.00394039, -0.000149776, 0.000307084, -0.819341, -1.56665, -0.050444, -0.174153)
+
+[node name="Node3D-test3" parent="Groundplane" instance=ExtResource("1_gfc40")]
+transform = Transform3D(7.27999e-05, -0.000149225, 0.398153, 0.0137158, -10.5074, -0.00394039, -0.819341, -0.00106956, 0.000149462, 0.0946846, -0.050444, 2.76946)
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.973829, 0.22728, 0, -0.22728, 0.973829, 0.0862003, 2.42286, 2.4731)
+transform = Transform3D(1, 0, 0, 0, 0.973829, 0.22728, 0, -0.22728, 0.973829, 0.0862003, 2.42286, 3.28746)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.0750126, -0.430229, -0.899598, -0.783144, -0.533046, 0.32023, -0.617299, 0.728536, -0.296946, -5.8192, 4.78192, 2.08189e-12)
+transform = Transform3D(-0.44074, 0.87638, -0.194184, -0.474765, -0.0439963, 0.879012, 0.761805, 0.479607, 0.435466, -2.1985, 4.78192, 3.13515)
 light_energy = 1.821
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.21103, 0, 0, 0, 0.0798246, 0, 0, 0, 0.53686, -3.44023, 2.11665, 0.431635)
-mesh = SubResource("BoxMesh_dcd7w")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.21103, 0, 0, 0, 0.0798246, 0, 0, 0, 0.53686, -3.44023, 2.08513, -0.100742)
-mesh = SubResource("BoxMesh_dcd7w")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.21103, 0, 0, 0, 0.0798246, 0, 0, 0, 0.53686, -3.44023, 2.08513, -0.591878)
-mesh = SubResource("BoxMesh_dcd7w")
+[node name="Ball" parent="." instance=ExtResource("3_hgpc2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.01124, 2.34542, 0.568979)

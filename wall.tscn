@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://y7dsnl4c14pf"]
+[gd_scene load_steps=3 format=3 uid="uid://y7dsnl4c14pf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_pr50d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j44e1"]
+size = Vector3(0.361481, 3.58362, 8.22836)
 
 [node name="Node3D-test" type="Node3D"]
 transform = Transform3D(0.999999, 0.00130539, -0.000182461, -0.00130535, 0.999999, 0.000375011, 0.000182888, -0.000374793, 1, -4.11769, 2.38419e-07, -2.706)
@@ -2972,3 +2975,9 @@ size = Vector3(0.185043, 2.64316, 0.371109)
 [node name="Stone760" type="CSGBox3D" parent="."]
 transform = Transform3D(-2.00196, -0.00632249, -0.000701566, -0.133532, 0.0947894, 2.19631e-07, -0.00115282, -3.65793e-06, 1.2183, 0.124288, 3.38857, -2.38039)
 size = Vector3(0.172722, 3.05058, 0.29847)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 3.98286e-11, 1.37089e-12, 2.65761e-11, 1, 4.94808e-12, 3.37815e-13, 4.25906e-12, 1, 0.0994653, 1.76464, -0.205252)
+shape = SubResource("BoxShape3D_j44e1")
