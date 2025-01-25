@@ -1,0 +1,229 @@
+[gd_scene format=3 uid="uid://pylim5r3d7d0"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Wall_left" type="Node" parent="."]
+
+[node name="Stone" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(-1.98925, -0.0123967, 1.05596e-07, 0.26182, -0.0941877, -1.38983e-08, -1.75406e-07, 1.73201e-17, -1.2183, -3.13764, 0.20942, 0.984634)
+size = Vector3(0.12616, 3.05273, 0.371109)
+
+[node name="Stone2" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(-2.00482, -0.00378601, 1.06422e-07, 0.0799609, -0.0949245, -4.24459e-09, -1.75406e-07, -1.58859e-16, -1.2183, -3.1352, 0.215753, 0.552186)
+size = Vector3(0.140839, 2.85657, 0.371109)
+
+[node name="Stone3" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(-2.00482, -0.00378601, 1.06422e-07, 0.0799609, -0.0949245, -4.24459e-09, -1.75406e-07, -1.58859e-16, -1.2183, -3.16265, 0.249289, 0.104399)
+size = Vector3(0.140839, 3.539, 0.371109)
+
+[node name="Stone4" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(-2.00482, -0.00378601, 1.06422e-07, 0.0799609, -0.0949245, -4.24459e-09, -1.75406e-07, -1.58859e-16, -1.2183, -3.12004, 0.205003, -0.342364)
+size = Vector3(0.185043, 2.64316, 0.371109)
+
+[node name="Stone5" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(-2.00482, -0.00378601, 1.06422e-07, 0.0799609, -0.0949245, -4.24459e-09, -1.75406e-07, -1.58859e-16, -1.2183, -3.12933, 0.214223, -0.729296)
+size = Vector3(0.172722, 3.05058, 0.29847)
+
+[node name="Stone6" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(2.00482, -0.00378601, 4.4223e-13, -0.0799609, -0.0949245, -1.76381e-14, 3.02885e-14, 3.26488e-23, 1.2183, -3.1289, 0.224827, -2.78507)
+size = Vector3(0.12616, 3.05273, 0.371109)
+
+[node name="Stone7" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(2.00482, -0.00378601, 4.4223e-13, -0.0799609, -0.0949245, -1.76381e-14, 3.02885e-14, 3.26488e-23, 1.2183, -3.14399, 0.216103, -2.36788)
+size = Vector3(0.140839, 2.85657, 0.371109)
+
+[node name="Stone8" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(2.00482, -0.00378601, 4.4223e-13, -0.0799609, -0.0949245, -1.76381e-14, 3.02885e-14, 3.26488e-23, 1.2183, -3.11396, 0.247347, -1.9201)
+size = Vector3(0.140839, 3.539, 0.371109)
+
+[node name="Stone9" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(2.00482, -0.00378601, 4.4223e-13, -0.0799609, -0.0949245, -1.76381e-14, 3.02885e-14, 3.26488e-23, 1.2183, -3.15996, 0.206595, -1.47334)
+size = Vector3(0.185043, 2.64316, 0.371109)
+
+[node name="Stone10" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(2.00482, -0.00378601, 4.4223e-13, -0.0799609, -0.0949245, -1.76381e-14, 3.02885e-14, 3.26488e-23, 1.2183, -3.14997, 0.215046, -1.0864)
+size = Vector3(0.172722, 3.05058, 0.29847)
+
+[node name="Stone11" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(-2.00482, -0.00378601, 1.06422e-07, 0.0799609, -0.0949245, -4.24459e-09, -1.75406e-07, -1.58859e-16, -1.2183, -3.14955, 0.22565, -3.03063)
+size = Vector3(0.12616, 3.05273, 0.371109)
+
+[node name="Stone12" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(-2.00482, -0.00378601, 1.06422e-07, 0.0799609, -0.0949245, -4.24459e-09, -1.75406e-07, -1.58859e-16, -1.2183, -3.1352, 0.215753, -3.44781)
+size = Vector3(0.140839, 2.85657, 0.371109)
+
+[node name="Stone13" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(-2.00482, -0.00378601, 1.06422e-07, 0.0799609, -0.0949245, -4.24459e-09, -1.75406e-07, -1.58859e-16, -1.2183, -3.16265, 0.249289, -3.8956)
+size = Vector3(0.140839, 3.539, 0.371109)
+
+[node name="Stone14" type="CSGBox3D" parent="Wall_left"]
+transform = Transform3D(-2.00482, -0.00378601, 1.06422e-07, 0.0799609, -0.0949245, -4.24459e-09, -1.75406e-07, -1.58859e-16, -1.2183, -3.12004, 0.205003, -4.34236)
+size = Vector3(0.185043, 2.64316, 0.371109)
+
+[node name="Stone15" type="CSGBox3D" parent="."]
+transform = Transform3D(-2.00641, 0, 1.06507e-07, 0, -0.095, 0, -1.75406e-07, 0, -1.2183, -3.12936, 0.214512, -4.72929)
+size = Vector3(0.172722, 3.05058, 0.29847)
+
+[node name="Stone16" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00641, 0, 4.42581e-13, 0, -0.095, 0, 3.02885e-14, 0, 1.2183, -3.12936, 0.225124, -6.78506)
+size = Vector3(0.12616, 3.05273, 0.371109)
+
+[node name="Stone17" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00641, 0, 4.42581e-13, 0, -0.095, 0, 3.02885e-14, 0, 1.2183, -3.14408, 0.215807, -6.36788)
+size = Vector3(0.140839, 2.85657, 0.371109)
+
+[node name="Stone18" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00641, 0, 4.42581e-13, 0, -0.095, 0, 3.02885e-14, 0, 1.2183, -3.11532, 0.248222, -5.92009)
+size = Vector3(0.140839, 3.539, 0.371109)
+
+[node name="Stone19" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00641, 0, 4.42581e-13, 0, -0.095, 0, 3.02885e-14, 0, 1.2183, -3.15966, 0.20567, -5.47333)
+size = Vector3(0.185043, 2.64316, 0.371109)
+
+[node name="Stone20" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00641, 0, 4.42581e-13, 0, -0.095, 0, 3.02885e-14, 0, 1.2183, -3.15001, 0.214512, -5.0864)
+size = Vector3(0.172722, 3.05058, 0.29847)
+
+[node name="Stone21" type="CSGBox3D" parent="."]
+transform = Transform3D(2.63108e-07, 0, 1.2183, 0, -0.0949999, 0, -2.00641, 0, 1.59761e-07, -3.01691, 0.225124, -6.91817)
+size = Vector3(0.12616, 3.05273, 0.371109)
+
+[node name="Stone22" type="CSGBox3D" parent="."]
+transform = Transform3D(2.63108e-07, 0, 1.2183, 0, -0.0949999, 0, -2.00641, 0, 1.59761e-07, -2.59973, 0.215806, -6.90345)
+size = Vector3(0.140839, 2.85657, 0.371109)
+
+[node name="Stone23" type="CSGBox3D" parent="."]
+transform = Transform3D(2.63108e-07, 0, 1.2183, 0, -0.0949999, 0, -2.00641, 0, 1.59761e-07, -2.15194, 0.248222, -6.93221)
+size = Vector3(0.140839, 3.539, 0.371109)
+
+[node name="Stone24" type="CSGBox3D" parent="."]
+transform = Transform3D(2.63108e-07, 0, 1.2183, 0, -0.0949999, 0, -2.00641, 0, 1.59761e-07, -1.70517, 0.205669, -6.88787)
+size = Vector3(0.185043, 2.64316, 0.371109)
+
+[node name="Stone25" type="CSGBox3D" parent="."]
+transform = Transform3D(2.63108e-07, 0, 1.2183, 0, -0.0949999, 0, -2.00641, 0, 1.59761e-07, -1.31824, 0.214511, -6.89752)
+size = Vector3(0.172722, 3.05058, 0.29847)
+
+[node name="Stone26" type="CSGBox3D" parent="."]
+transform = Transform3D(-8.77026e-08, 0, -1.2183, 0, -0.0949999, 0, 2.00641, 0, -5.32539e-08, 0.737535, 0.225124, -6.89751)
+size = Vector3(0.12616, 3.05273, 0.371109)
+
+[node name="Stone27" type="CSGBox3D" parent="."]
+transform = Transform3D(-8.77026e-08, 0, -1.2183, 0, -0.0949999, 0, 2.00641, 0, -5.32539e-08, 0.320349, 0.215806, -6.91224)
+size = Vector3(0.140839, 2.85657, 0.371109)
+
+[node name="Stone28" type="CSGBox3D" parent="."]
+transform = Transform3D(-8.77026e-08, 0, -1.2183, 0, -0.0949999, 0, 2.00641, 0, -5.32539e-08, -0.127439, 0.248222, -6.88347)
+size = Vector3(0.140839, 3.539, 0.371109)
+
+[node name="Stone29" type="CSGBox3D" parent="."]
+transform = Transform3D(-8.77026e-08, 0, -1.2183, 0, -0.0949999, 0, 2.00641, 0, -5.32539e-08, -0.574199, 0.205669, -6.92782)
+size = Vector3(0.185043, 2.64316, 0.371109)
+
+[node name="Stone30" type="CSGBox3D" parent="."]
+transform = Transform3D(-8.77026e-08, 0, -1.2183, 0, -0.0949999, 0, 2.00641, 0, -5.32539e-08, -0.961134, 0.214511, -6.91817)
+size = Vector3(0.172722, 3.05058, 0.29847)
+
+[node name="Stone31" type="CSGBox3D" parent="."]
+transform = Transform3D(2.63108e-07, 0, 1.2183, 0, -0.0949999, 0, -2.00641, 0, 1.59761e-07, 1.15612, 0.225124, -6.91817)
+size = Vector3(0.12616, 3.05273, 0.371109)
+
+[node name="Stone32" type="CSGBox3D" parent="."]
+transform = Transform3D(2.63108e-07, 0, 1.2183, 0, -0.0949999, 0, -2.00641, 0, 1.59761e-07, 1.57331, 0.215806, -6.90345)
+size = Vector3(0.140839, 2.85657, 0.371109)
+
+[node name="Stone33" type="CSGBox3D" parent="."]
+transform = Transform3D(2.63108e-07, 0, 1.2183, 0, -0.0949999, 0, -2.00641, 0, 1.59761e-07, 2.0211, 0.248222, -6.93221)
+size = Vector3(0.140839, 3.539, 0.371109)
+
+[node name="Stone34" type="CSGBox3D" parent="."]
+transform = Transform3D(2.63108e-07, 0, 1.2183, 0, -0.0949999, 0, -2.00641, 0, 1.59761e-07, 2.46786, 0.205669, -6.88787)
+size = Vector3(0.185043, 2.64316, 0.371109)
+
+[node name="Stone35" type="CSGBox3D" parent="."]
+transform = Transform3D(2.63108e-07, 0, 1.2183, 0, -0.0949999, 0, -2.00641, 0, 1.59761e-07, 2.8548, 0.214511, -6.89752)
+size = Vector3(0.172722, 3.05058, 0.29847)
+
+[node name="Stone40" type="CSGBox3D" parent="."]
+transform = Transform3D(-8.77026e-08, 0, -1.2183, 0, -0.0949999, 0, 2.00641, 0, -5.32539e-08, 3.21191, 0.214511, -6.91817)
+size = Vector3(0.172722, 3.05058, 0.29847)
+
+[node name="Stone36" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00642, 0, -2.13014e-07, 0, -0.0949999, 0, 3.50812e-07, 0, 1.2183, 3.56013, 0.248222, -6.59615)
+size = Vector3(0.140839, 3.539, 0.371109)
+
+[node name="Stone37" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00642, 0, -2.13014e-07, 0, -0.0949999, 0, 3.50812e-07, 0, 1.2183, 3.51578, 0.205669, -6.14939)
+size = Vector3(0.185043, 2.64316, 0.371109)
+
+[node name="Stone38" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00642, 0, -2.13014e-07, 0, -0.0949999, 0, 3.50812e-07, 0, 1.2183, 3.52543, 0.214511, -5.76246)
+size = Vector3(0.172722, 3.05058, 0.29847)
+
+[node name="Stone39" type="CSGBox3D" parent="."]
+transform = Transform3D(-2.00642, 0, 1.06507e-07, 0, -0.0949999, 0, -1.75407e-07, 0, -1.2183, 3.52543, 0.225124, -3.70668)
+size = Vector3(0.12616, 3.05273, 0.371109)
+
+[node name="Stone41" type="CSGBox3D" parent="."]
+transform = Transform3D(-2.00642, 0, 1.06507e-07, 0, -0.0949999, 0, -1.75407e-07, 0, -1.2183, 3.54015, 0.215806, -4.12387)
+size = Vector3(0.140839, 2.85657, 0.371109)
+
+[node name="Stone42" type="CSGBox3D" parent="."]
+transform = Transform3D(-2.00642, 0, 1.06507e-07, 0, -0.0949999, 0, -1.75407e-07, 0, -1.2183, 3.51139, 0.248222, -4.57166)
+size = Vector3(0.140839, 3.539, 0.371109)
+
+[node name="Stone43" type="CSGBox3D" parent="."]
+transform = Transform3D(-2.00642, 0, 1.06507e-07, 0, -0.0949999, 0, -1.75407e-07, 0, -1.2183, 3.55573, 0.205669, -5.01841)
+size = Vector3(0.185043, 2.64316, 0.371109)
+
+[node name="Stone44" type="CSGBox3D" parent="."]
+transform = Transform3D(-2.00642, 0, 1.06507e-07, 0, -0.0949999, 0, -1.75407e-07, 0, -1.2183, 3.54608, 0.214511, -5.40535)
+size = Vector3(0.172722, 3.05058, 0.29847)
+
+[node name="Stone45" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00642, 0, -2.13014e-07, 0, -0.0949999, 0, 3.50812e-07, 0, 1.2183, 3.54609, 0.225124, -3.28809)
+size = Vector3(0.12616, 3.05273, 0.371109)
+
+[node name="Stone46" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00642, 0, -2.13014e-07, 0, -0.0949999, 0, 3.50812e-07, 0, 1.2183, 3.53136, 0.215806, -2.87091)
+size = Vector3(0.140839, 2.85657, 0.371109)
+
+[node name="Stone47" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00642, 0, -2.13014e-07, 0, -0.0949999, 0, 3.50812e-07, 0, 1.2183, 3.56013, 0.248222, -2.42312)
+size = Vector3(0.140839, 3.539, 0.371109)
+
+[node name="Stone48" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00642, 0, -2.13014e-07, 0, -0.0949999, 0, 3.50812e-07, 0, 1.2183, 3.51578, 0.205669, -1.97636)
+size = Vector3(0.185043, 2.64316, 0.371109)
+
+[node name="Stone49" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00642, 0, -2.13014e-07, 0, -0.0949999, 0, 3.50812e-07, 0, 1.2183, 3.52543, 0.214511, -1.58943)
+size = Vector3(0.172722, 3.05058, 0.29847)
+
+[node name="Stone50" type="CSGBox3D" parent="."]
+transform = Transform3D(-2.00642, 0, 1.06507e-07, 0, -0.0949999, 0, -1.75407e-07, 0, -1.2183, 3.54608, 0.214511, -1.23232)
+size = Vector3(0.172722, 3.05058, 0.29847)
+
+[node name="Stone51" type="CSGBox3D" parent="."]
+transform = Transform3D(-2.00642, 0, 1.06507e-07, 0, -0.0949999, 0, -1.75407e-07, 0, -1.2183, 3.52543, 0.225124, -0.914116)
+size = Vector3(0.12616, 3.05273, 0.371109)
+
+[node name="Stone52" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00642, 0, -2.13014e-07, 0, -0.0949999, 0, 3.50812e-07, 0, 1.2183, 3.54609, 0.225124, -0.495525)
+size = Vector3(0.12616, 3.05273, 0.371109)
+
+[node name="Stone53" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00642, 0, -2.13014e-07, 0, -0.0949999, 0, 3.50812e-07, 0, 1.2183, 3.53136, 0.215806, -0.0783395)
+size = Vector3(0.140839, 2.85657, 0.371109)
+
+[node name="Stone54" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00642, 0, -2.13014e-07, 0, -0.0949999, 0, 3.50812e-07, 0, 1.2183, 3.56013, 0.248222, 0.369447)
+size = Vector3(0.140839, 3.539, 0.371109)
+
+[node name="Stone55" type="CSGBox3D" parent="."]
+transform = Transform3D(2.00642, 0, -2.13014e-07, 0, -0.0949999, 0, 3.50812e-07, 0, 1.2183, 3.51578, 0.205669, 0.816207)
+size = Vector3(0.185043, 2.64316, 0.371109)
+
+[node name="Groundplane" type="CSGBox3D" parent="."]
+transform = Transform3D(-2.00641, 0, 1.06507e-07, 0, -0.095, 0, -1.75406e-07, 0, -1.2183, 0.173638, 0.00746105, -2.92801)
+size = Vector3(3.53174, 0.918945, 6.77008)
