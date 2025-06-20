@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://tdlw3ts18g8s"]
+[gd_scene load_steps=11 format=3 uid="uid://bbpqrsdk6ek3k"]
 
-[ext_resource type="PackedScene" uid="uid://c7g7odqucpoyi" path="res://groundplane.tscn" id="1_fxdqn"]
-[ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://ball.tscn" id="2_7nebo"]
+[ext_resource type="PackedScene" uid="uid://c7g7odqucpoyi" path="res://Materials/groundplane.tscn" id="1_fxdqn"]
+[ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://Materials/ball.tscn" id="2_7nebo"]
 [ext_resource type="PackedScene" uid="uid://bmghek4m5evdf" path="res://3D Models/stone_brick.glb" id="3_7nebo"]
 [ext_resource type="Texture2D" uid="uid://bbnh8v3kyftim" path="res://shader/Sky_Materials/Classic/FS000_Night_01_Moonless.png" id="3_b2npp"]
 

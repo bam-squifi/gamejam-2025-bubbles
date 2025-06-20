@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Game-Jam-25Bubbles"
-run/main_scene="res://Level_0_0.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="res://Level/Level_0_0.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [input]

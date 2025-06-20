@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=3 uid="uid://pylim5r3d7d0"]
 
-[ext_resource type="PackedScene" uid="uid://y7dsnl4c14pf" path="res://wall.tscn" id="1_gfc40"]
-[ext_resource type="PackedScene" uid="uid://bb7oauwmbmeu" path="res://step.tscn" id="3_fv5xo"]
-[ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://ball.tscn" id="3_hgpc2"]
-[ext_resource type="PackedScene" uid="uid://c7g7odqucpoyi" path="res://groundplane.tscn" id="4_5c3jh"]
-[ext_resource type="PackedScene" uid="uid://w0jayfege6gc" path="res://bubble.tscn" id="5_x6y17"]
+[ext_resource type="PackedScene" uid="uid://y7dsnl4c14pf" path="res://Components/wall.tscn" id="1_gfc40"]
+[ext_resource type="PackedScene" uid="uid://bb7oauwmbmeu" path="res://Materials/step.tscn" id="3_fv5xo"]
+[ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://Materials/ball.tscn" id="3_hgpc2"]
+[ext_resource type="PackedScene" uid="uid://c7g7odqucpoyi" path="res://Materials/groundplane.tscn" id="4_5c3jh"]
+[ext_resource type="PackedScene" uid="uid://w0jayfege6gc" path="res://Materials/bubble.tscn" id="5_x6y17"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_imfdv"]
 friction = 0.2

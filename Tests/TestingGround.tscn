@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6ivoec72xif4"]
+
+[ext_resource type="Script" path="res://Scripts/base_movement.gd" id="1_81lvi"]
+[ext_resource type="Script" path="res://Scripts/MultiMeshWall.gd" id="2_8vn52"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lqoaq"]
+size = Vector3(3.3866, 1, 6.72296)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6234v"]
+radius = 0.107667
+
+[node name="Welt" type="Node3D"]
+
+[node name="Groundplane" type="CSGBox3D" parent="."]
+transform = Transform3D(-2.00641, 0, 1.06507e-07, 0, -0.095, 0, -1.75406e-07, 0, -1.2183, 0.173638, 0.00746105, -2.92801)
+size = Vector3(3.53174, 0.918945, 6.77008)
+script = ExtResource("1_81lvi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Groundplane"]
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Groundplane/StaticBody3D"]
+transform = Transform3D(1, 0, 4.26326e-13, 0, 1, 0, 0, 0, 1, -0.0717163, 0, -0.0164499)
+shape = SubResource("BoxShape3D_lqoaq")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0162137, 0.999869, 0, -0.999869, 0.0162137, 0, 6.39858, -2.40017)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.90178, 0.432196, 0, -0.432196, 0.90178, 0, 1.19954, 0)
+
+[node name="Ball" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.30388, -2.37156)
+mass = 1000.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ball"]
+shape = SubResource("SphereShape3D_6234v")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Ball"]
+process_physics_priority = 1
+radius = 0.1
+radial_segments = 23
+
+[node name="Wall" type="Node3D" parent="."]
+script = ExtResource("2_8vn52")

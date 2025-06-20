@@ -1,10 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://ux4eyhsk4xix"]
+[gd_scene load_steps=11 format=3 uid="uid://dxqhkcvbj61pj"]
 
-[ext_resource type="PackedScene" uid="uid://c7g7odqucpoyi" path="res://groundplane.tscn" id="1_0f6pd"]
-[ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://ball.tscn" id="2_usunc"]
+[ext_resource type="PackedScene" uid="uid://c7g7odqucpoyi" path="res://Materials/groundplane.tscn" id="1_mct0m"]
+[ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://Materials/ball.tscn" id="2_kxaim"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_auons"]
 friction = 0.1
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_f11es"]
+
+[sub_resource type="Compositor" id="Compositor_qkfpu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q3nuu"]
 sky_top_color = Color(0.250493, 0.447379, 0.770751, 1)
@@ -37,17 +41,22 @@ dof_blur_far_distance = 29.4
 [sub_resource type="Compositor" id="Compositor_8cx67"]
 
 [node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.167826, 0, 0)
 
-[node name="Groundplane" parent="." instance=ExtResource("1_0f6pd")]
+[node name="Groundplane" parent="." instance=ExtResource("1_mct0m")]
 transform = Transform3D(-2.00641, 0, 1.06507e-07, 0, -0.095, 0, -1.75406e-07, 0, -1.2183, 0, 0, 0)
+use_collision = true
 
-[node name="Ball" parent="." instance=ExtResource("2_usunc")]
+[node name="Ball" parent="." instance=ExtResource("2_kxaim")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08528, 0)
 mass = 1.0
 physics_material_override = SubResource("PhysicsMaterial_auons")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.0765972, 0.997062, 0, -0.997062, 0.0765972, 0, 5, 0)
+transform = Transform3D(1, 0, 0, 0, 0.0765972, 0.997062, 0, -0.997062, 0.0765972, 0, 13.2246, 0)
+visible = false
+attributes = SubResource("CameraAttributesPractical_f11es")
+compositor = SubResource("Compositor_qkfpu")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.0267352, 0.999643, 0, -0.999643, 0.0267352, 0, 5, 1.52471)

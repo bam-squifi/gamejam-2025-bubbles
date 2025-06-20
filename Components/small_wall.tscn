@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpsirghblwylv"]
+
+[ext_resource type="PackedScene" uid="uid://vj0g7v73ewc5" path="res://Materials/Stein.tscn" id="1_nfbd6"]
+
+[node name="Small_Wall" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00916624, 0, 1.5974e-05)
+
+[node name="untere_reihe" type="Node3D" parent="."]
+
+[node name="Stein" parent="untere_reihe" instance=ExtResource("1_nfbd6")]
+
+[node name="Stein2" parent="untere_reihe" instance=ExtResource("1_nfbd6")]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4.37114e-08, -4.37114e-08, 2.72941, 0.146016, 0)
+
+[node name="Stein3" parent="untere_reihe" instance=ExtResource("1_nfbd6")]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4.37114e-08, -4.37114e-08, 3.42805, 0.146016, 0)
+
+[node name="Stein4" parent="untere_reihe" instance=ExtResource("1_nfbd6")]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4.37114e-08, -4.37114e-08, 4.13422, 0.146016, 0)
+
+[node name="Stein5" parent="untere_reihe" instance=ExtResource("1_nfbd6")]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4.37114e-08, -4.37114e-08, 4.83417, 0.146016, 0)
+
+[node name="zweite_reihe" type="Node3D" parent="."]
+
+[node name="Stein6" parent="zweite_reihe" instance=ExtResource("1_nfbd6")]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4.37114e-08, -4.37114e-08, 4.52762, 0.422718, 0)
+
+[node name="Stein7" parent="zweite_reihe" instance=ExtResource("1_nfbd6")]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4.37114e-08, -4.37114e-08, 3.83773, 0.422718, 0)
+
+[node name="Stein8" parent="zweite_reihe" instance=ExtResource("1_nfbd6")]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4.37114e-08, -4.37114e-08, 3.15771, 0.422718, 0)
+
+[node name="Stein9" parent="zweite_reihe" instance=ExtResource("1_nfbd6")]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4.37114e-08, -4.37114e-08, 2.17554, 0.422718, 0)
+
+[node name="dritte_reihe" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0549841, 0, 0)
+
+[node name="Stein10" parent="dritte_reihe" instance=ExtResource("1_nfbd6")]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4.37114e-08, -4.37114e-08, 2.64746, 0.682501, 0)
+
+[node name="Stein14" parent="dritte_reihe" instance=ExtResource("1_nfbd6")]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4.37114e-08, -4.37114e-08, 1.94756, 0.682501, 0)
+
+[node name="Stein11" parent="dritte_reihe" instance=ExtResource("1_nfbd6")]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4.37114e-08, -4.37114e-08, 3.34959, 0.682501, 0)
+
+[node name="Stein12" parent="dritte_reihe" instance=ExtResource("1_nfbd6")]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4.37114e-08, -4.37114e-08, 4.056, 0.682501, 0)
+
+[node name="Stein13" parent="dritte_reihe" instance=ExtResource("1_nfbd6")]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91068e-15, -1, 1, -4.37114e-08, -4.37114e-08, 4.75125, 0.682501, 0)
