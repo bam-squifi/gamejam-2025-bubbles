@@ -1538,16 +1538,6 @@ transform = Transform3D(2.0057, -0.00253985, 0.000701459, 0.0536422, 0.094966, -
 material_override = SubResource("StandardMaterial3D_n10y1")
 size = Vector3(0.172722, 3.05058, 0.29847)
 
-[node name="Stone341" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.102586, 1.67183, -0.0790749)
-material_override = SubResource("StandardMaterial3D_n10y1")
-size = Vector3(0.12616, 3.05273, 0.371109)
-
-[node name="Stone342" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.116821, 1.68154, 0.338123)
-material_override = SubResource("StandardMaterial3D_n10y1")
-size = Vector3(0.140839, 2.85657, 0.371109)
-
 [node name="Stone343" type="CSGBox3D" parent="."]
 transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.0886796, 1.64837, 0.785887)
 material_override = SubResource("StandardMaterial3D_n10y1")
@@ -1607,16 +1597,6 @@ size = Vector3(0.185043, 2.64316, 0.371109)
 transform = Transform3D(2.0057, -0.00253985, 0.000701459, 0.0536422, 0.094966, -2.22481e-07, 0.00115481, -1.47971e-06, -1.2183, 0.101125, 1.68244, 1.9767)
 material_override = SubResource("StandardMaterial3D_n10y1")
 size = Vector3(0.172722, 3.05058, 0.29847)
-
-[node name="Stone355" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.102586, 1.67183, -0.0790749)
-material_override = SubResource("StandardMaterial3D_n10y1")
-size = Vector3(0.12616, 3.05273, 0.371109)
-
-[node name="Stone356" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.116821, 1.68154, 0.338123)
-material_override = SubResource("StandardMaterial3D_n10y1")
-size = Vector3(0.140839, 2.85657, 0.371109)
 
 [node name="Stone357" type="CSGBox3D" parent="."]
 transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.0886796, 1.64837, 0.785887)
@@ -1738,16 +1718,6 @@ transform = Transform3D(2.0057, -0.00253985, 0.000701459, 0.0536422, 0.094966, -
 material_override = SubResource("StandardMaterial3D_n10y1")
 size = Vector3(0.172722, 3.05058, 0.29847)
 
-[node name="Stone381" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.102586, 1.67183, -0.0790749)
-material_override = SubResource("StandardMaterial3D_n10y1")
-size = Vector3(0.12616, 3.05273, 0.371109)
-
-[node name="Stone382" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.116821, 1.68154, 0.338123)
-material_override = SubResource("StandardMaterial3D_n10y1")
-size = Vector3(0.140839, 2.85657, 0.371109)
-
 [node name="Stone383" type="CSGBox3D" parent="."]
 transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.0886796, 1.64837, 0.785887)
 material_override = SubResource("StandardMaterial3D_n10y1")
@@ -1762,11 +1732,6 @@ size = Vector3(0.185043, 2.64316, 0.371109)
 transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.12198, 1.683, 1.61961)
 material_override = SubResource("StandardMaterial3D_n10y1")
 size = Vector3(0.172722, 3.05058, 0.29847)
-
-[node name="Stone386" type="CSGBox3D" parent="."]
-transform = Transform3D(2.0057, -0.00253985, 0.000701459, 0.0536422, 0.094966, -2.22481e-07, 0.00115481, -1.47971e-06, -1.2183, 0.123386, 1.67239, -0.324623)
-material_override = SubResource("StandardMaterial3D_n10y1")
-size = Vector3(0.12616, 3.05273, 0.371109)
 
 [node name="Stone387" type="CSGBox3D" parent="."]
 transform = Transform3D(2.0057, -0.00253985, 0.000701459, 0.0536422, 0.094966, -2.22481e-07, 0.00115481, -1.47971e-06, -1.2183, 0.108649, 1.68131, -0.741812)
@@ -1808,16 +1773,6 @@ transform = Transform3D(2.0057, -0.00253985, 0.000701459, 0.0536422, 0.094966, -
 material_override = SubResource("StandardMaterial3D_n10y1")
 size = Vector3(0.172722, 3.05058, 0.29847)
 
-[node name="Stone395" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.102586, 1.67183, -0.0790749)
-material_override = SubResource("StandardMaterial3D_n10y1")
-size = Vector3(0.12616, 3.05273, 0.371109)
-
-[node name="Stone396" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.116821, 1.68154, 0.338123)
-material_override = SubResource("StandardMaterial3D_n10y1")
-size = Vector3(0.140839, 2.85657, 0.371109)
-
 [node name="Stone397" type="CSGBox3D" parent="."]
 transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.0886796, 1.64837, 0.785887)
 material_override = SubResource("StandardMaterial3D_n10y1")
@@ -1832,11 +1787,6 @@ size = Vector3(0.185043, 2.64316, 0.371109)
 transform = Transform3D(-2.0057, -0.00253985, -0.000701566, -0.0536422, 0.094966, 2.19633e-07, -0.00115498, -1.47971e-06, 1.2183, 0.12198, 1.683, 1.61961)
 material_override = SubResource("StandardMaterial3D_n10y1")
 size = Vector3(0.172722, 3.05058, 0.29847)
-
-[node name="Stone400" type="CSGBox3D" parent="."]
-transform = Transform3D(2.0057, -0.00253985, 0.000701459, 0.0536422, 0.094966, -2.22481e-07, 0.00115481, -1.47971e-06, -1.2183, 0.123386, 1.67239, -0.324623)
-material_override = SubResource("StandardMaterial3D_n10y1")
-size = Vector3(0.12616, 3.05273, 0.371109)
 
 [node name="Stone401" type="CSGBox3D" parent="."]
 transform = Transform3D(2.0057, -0.00253985, 0.000701459, 0.0536422, 0.094966, -2.22481e-07, 0.00115481, -1.47971e-06, -1.2183, 0.108649, 1.68131, -0.741812)
@@ -1938,16 +1888,6 @@ transform = Transform3D(-2.00482, -0.00378601, 1.06422e-07, 0.0799609, -0.094924
 material_override = SubResource("StandardMaterial3D_n10y1")
 size = Vector3(0.172722, 3.05058, 0.29847)
 
-[node name="Stone106" type="CSGBox3D" parent="."]
-transform = Transform3D(2.00482, -0.00378601, 4.4223e-13, -0.0799609, -0.0949245, -1.76381e-14, 3.02885e-14, 4.30195e-23, 1.2183, 0.114087, 1.92987, -0.0790708)
-material_override = SubResource("StandardMaterial3D_n10y1")
-size = Vector3(0.12616, 3.05273, 0.371109)
-
-[node name="Stone107" type="CSGBox3D" parent="."]
-transform = Transform3D(2.00482, -0.00378601, 4.4223e-13, -0.0799609, -0.0949245, -1.76381e-14, 3.02885e-14, 4.30195e-23, 1.2183, 0.0989966, 1.92114, 0.338119)
-material_override = SubResource("StandardMaterial3D_n10y1")
-size = Vector3(0.140839, 2.85657, 0.371109)
-
 [node name="Stone108" type="CSGBox3D" parent="."]
 transform = Transform3D(2.00482, -0.00378601, 4.4223e-13, -0.0799609, -0.0949245, -1.76381e-14, 3.02885e-14, 4.30195e-23, 1.2183, 0.129027, 1.95239, 0.785899)
 material_override = SubResource("StandardMaterial3D_n10y1")
@@ -1962,11 +1902,6 @@ size = Vector3(0.185043, 2.64316, 0.371109)
 transform = Transform3D(2.00482, -0.00378601, 4.4223e-13, -0.0799609, -0.0949245, -1.76381e-14, 3.02885e-14, 4.30195e-23, 1.2183, 0.0930166, 1.92008, 1.6196)
 material_override = SubResource("StandardMaterial3D_n10y1")
 size = Vector3(0.172722, 3.05058, 0.29847)
-
-[node name="Stone111" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.00482, -0.00378601, 1.06422e-07, 0.0799609, -0.0949245, -4.24459e-09, -1.75406e-07, -1.1109e-16, -1.2183, 0.0934367, 1.93069, -0.324631)
-material_override = SubResource("StandardMaterial3D_n10y1")
-size = Vector3(0.12616, 3.05273, 0.371109)
 
 [node name="Stone112" type="CSGBox3D" parent="."]
 transform = Transform3D(-2.00482, -0.00378601, 1.06422e-07, 0.0799609, -0.0949245, -4.24459e-09, -1.75406e-07, -1.1109e-16, -1.2183, 0.107787, 1.92079, -0.741811)

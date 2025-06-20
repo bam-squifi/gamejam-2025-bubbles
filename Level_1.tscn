@@ -40,7 +40,7 @@ volumetric_fog_enabled = true
 volumetric_fog_density = 0.0395
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_7r5lt"]
-dof_blur_near_enabled = true
+exposure_multiplier = 0.446
 dof_blur_near_distance = 1.02
 
 [sub_resource type="Compositor" id="Compositor_wju01"]

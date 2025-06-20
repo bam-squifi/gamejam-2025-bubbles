@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://ux4eyhsk4xix"]
+
+[ext_resource type="PackedScene" uid="uid://c7g7odqucpoyi" path="res://groundplane.tscn" id="1_0f6pd"]
+[ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://ball.tscn" id="2_usunc"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_auons"]
+friction = 0.1
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q3nuu"]
+sky_top_color = Color(0.250493, 0.447379, 0.770751, 1)
+sky_horizon_color = Color(0.412867, 0.693442, 0.85106, 1)
+sky_cover_modulate = Color(0.403922, 1, 1, 1)
+ground_bottom_color = Color(0.141365, 0.266825, 0.262875, 1)
+sun_angle_max = 87.78
+
+[sub_resource type="Sky" id="Sky_ux0il"]
+sky_material = SubResource("ProceduralSkyMaterial_q3nuu")
+
+[sub_resource type="Environment" id="Environment_nlnvi"]
+background_mode = 2
+sky = SubResource("Sky_ux0il")
+ambient_light_source = 3
+ambient_light_sky_contribution = 0.48
+ambient_light_energy = 0.52
+reflected_light_source = 2
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0203
+volumetric_fog_length = 3.17
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_kmh31"]
+dof_blur_far_distance = 29.4
+
+[sub_resource type="Compositor" id="Compositor_8cx67"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Groundplane" parent="." instance=ExtResource("1_0f6pd")]
+transform = Transform3D(-2.00641, 0, 1.06507e-07, 0, -0.095, 0, -1.75406e-07, 0, -1.2183, 0, 0, 0)
+
+[node name="Ball" parent="." instance=ExtResource("2_usunc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08528, 0)
+mass = 1.0
+physics_material_override = SubResource("PhysicsMaterial_auons")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0765972, 0.997062, 0, -0.997062, 0.0765972, 0, 5, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0267352, 0.999643, 0, -0.999643, 0.0267352, 0, 5, 1.52471)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nlnvi")
+camera_attributes = SubResource("CameraAttributesPractical_kmh31")
+compositor = SubResource("Compositor_8cx67")
