@@ -1,0 +1,225 @@
+[gd_scene load_steps=11 format=3 uid="uid://tdlw3ts18g8s"]
+
+[ext_resource type="PackedScene" uid="uid://c7g7odqucpoyi" path="res://groundplane.tscn" id="1_fxdqn"]
+[ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://ball.tscn" id="2_7nebo"]
+[ext_resource type="PackedScene" uid="uid://bmghek4m5evdf" path="res://3D Models/stone_brick.glb" id="3_7nebo"]
+[ext_resource type="Texture2D" uid="uid://bbnh8v3kyftim" path="res://shader/Sky_Materials/Classic/FS000_Night_01_Moonless.png" id="3_b2npp"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_auons"]
+friction = 0.1
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fe3d7"]
+panorama = ExtResource("3_b2npp")
+
+[sub_resource type="Sky" id="Sky_548qx"]
+sky_material = SubResource("PanoramaSkyMaterial_fe3d7")
+
+[sub_resource type="Environment" id="Environment_nlnvi"]
+background_mode = 2
+sky = SubResource("Sky_548qx")
+ambient_light_source = 3
+ambient_light_sky_contribution = 0.48
+ambient_light_energy = 0.52
+reflected_light_source = 2
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0203
+volumetric_fog_length = 3.17
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_kmh31"]
+dof_blur_far_distance = 29.4
+
+[sub_resource type="Compositor" id="Compositor_8cx67"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Groundplane" parent="." instance=ExtResource("1_fxdqn")]
+transform = Transform3D(-2.00641, 0, 1.06507e-07, 0, -0.095, 0, -1.75406e-07, 0, -1.2183, 0, 0, 0)
+
+[node name="Ball" parent="." instance=ExtResource("2_7nebo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08528, 0)
+mass = 1.0
+physics_material_override = SubResource("PhysicsMaterial_auons")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0765972, 0.997062, 0, -0.997062, 0.0765972, 0, 5, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0267352, 0.999643, 0, -0.999643, 0.0267352, 0, 5, 1.52471)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nlnvi")
+camera_attributes = SubResource("CameraAttributesPractical_kmh31")
+compositor = SubResource("Compositor_8cx67")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-0.00998057, -8.72529e-10, 0, 8.72529e-10, -0.00998057, 0, 0, 0, 0.00998057, 3.32982, 0.184125, -4.24811)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-0.00998057, -8.72529e-10, 0, 8.72529e-10, -0.00998057, 0, 0, 0, 0.00998057, 3.32982, 0.184125, -3.54321)
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-0.00998057, -8.72529e-10, 0, 8.72529e-10, -0.00998057, 0, 0, 0, 0.00998057, 3.32982, 0.184125, -2.83947)
+
+[node name="Sketchfab_Scene4" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-0.00998057, -8.72529e-10, 0, 8.72529e-10, -0.00998057, 0, 0, 0, 0.00998057, 3.32982, 0.184125, -2.13456)
+
+[node name="Sketchfab_Scene5" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-0.00998057, -8.72529e-10, 0, 8.72529e-10, -0.00998057, 0, 0, 0, 0.00998057, 3.32982, 0.184125, -1.44295)
+
+[node name="Sketchfab_Scene6" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-0.00998057, -8.72529e-10, 0, 8.72529e-10, -0.00998057, 0, 0, 0, 0.00998057, 3.32982, 0.184125, -0.738053)
+
+[node name="Sketchfab_Scene7" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-0.00998057, -8.72529e-10, 0, 8.72529e-10, -0.00998057, 0, 0, 0, 0.00998057, 3.32982, 0.184125, -0.0343109)
+
+[node name="Sketchfab_Scene8" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-0.00998057, -8.72529e-10, 0, 8.72529e-10, -0.00998057, 0, 0, 0, 0.00998057, 3.32982, 0.184125, 0.67059)
+
+[node name="Sketchfab_Scene9" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-0.00998057, -8.72529e-10, 0, 8.72529e-10, -0.00998057, 0, 0, 0, 0.00998057, 3.32982, 0.184125, 1.37839)
+
+[node name="Sketchfab_Scene10" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-0.00998057, -8.72529e-10, 0, 8.72529e-10, -0.00998057, 0, 0, 0, 0.00998057, 3.32982, 0.184125, 2.08329)
+
+[node name="Sketchfab_Scene11" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-0.00998057, -8.72529e-10, 0, 8.72529e-10, -0.00998057, 0, 0, 0, 0.00998057, 3.32982, 0.184125, 2.78703)
+
+[node name="Sketchfab_Scene12" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-0.00998057, -8.72529e-10, 0, 8.72529e-10, -0.00998057, 0, 0, 0, 0.00998057, 3.32982, 0.184125, 3.49193)
+
+[node name="Sketchfab_Scene13" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(0.00998057, 8.72529e-10, 8.72529e-10, 8.72529e-10, -0.00998057, 0, 8.72529e-10, 7.62789e-17, -0.00998057, 3.32983, 0.479546, 3.86285)
+
+[node name="Sketchfab_Scene14" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(0.00998057, 8.72529e-10, 8.72529e-10, 8.72529e-10, -0.00998057, 0, 8.72529e-10, 7.62789e-17, -0.00998057, 3.32983, 0.479546, 3.15795)
+
+[node name="Sketchfab_Scene15" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(0.00998057, 8.72529e-10, 8.72529e-10, 8.72529e-10, -0.00998057, 0, 8.72529e-10, 7.62789e-17, -0.00998057, 3.32983, 0.479546, 2.45421)
+
+[node name="Sketchfab_Scene16" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(0.00998057, 8.72529e-10, 8.72529e-10, 8.72529e-10, -0.00998057, 0, 8.72529e-10, 7.62789e-17, -0.00998057, 3.32983, 0.479546, 1.74931)
+
+[node name="Sketchfab_Scene17" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(0.00998057, 8.72529e-10, 8.72529e-10, 8.72529e-10, -0.00998057, 0, 8.72529e-10, 7.62789e-17, -0.00998057, 3.32983, 0.479546, 1.05769)
+
+[node name="Sketchfab_Scene18" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(0.00998057, 8.72529e-10, 8.72529e-10, 8.72529e-10, -0.00998057, 0, 8.72529e-10, 7.62789e-17, -0.00998057, 3.32983, 0.479546, 0.352793)
+
+[node name="Sketchfab_Scene19" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(0.00998057, 8.72529e-10, 8.72529e-10, 8.72529e-10, -0.00998057, 0, 8.72529e-10, 7.62789e-17, -0.00998057, 3.32983, 0.479546, -0.350949)
+
+[node name="Sketchfab_Scene20" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(0.00998057, 8.72529e-10, 8.72529e-10, 8.72529e-10, -0.00998057, 0, 8.72529e-10, 7.62789e-17, -0.00998057, 3.32983, 0.479546, -1.05585)
+
+[node name="Sketchfab_Scene21" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(0.00998057, 8.72529e-10, 8.72529e-10, 8.72529e-10, -0.00998057, 0, 8.72529e-10, 7.62789e-17, -0.00998057, 3.32983, 0.479546, -1.76365)
+
+[node name="Sketchfab_Scene22" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(0.00998057, 8.72529e-10, 8.72529e-10, 8.72529e-10, -0.00998057, 0, 8.72529e-10, 7.62789e-17, -0.00998057, 3.32983, 0.479546, -2.46855)
+
+[node name="Sketchfab_Scene23" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(0.00998057, 8.72529e-10, 8.72529e-10, 8.72529e-10, -0.00998057, 0, 8.72529e-10, 7.62789e-17, -0.00998057, 3.32983, 0.479546, -3.17229)
+
+[node name="Sketchfab_Scene24" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(0.00998057, 8.72529e-10, 8.72529e-10, 8.72529e-10, -0.00998057, 0, 8.72529e-10, 7.62789e-17, -0.00998057, 3.32983, 0.479546, -3.87719)
+
+[node name="Sketchfab_Scene25" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(4.36265e-10, 3.81395e-17, -0.00998057, 8.72529e-10, -0.00998057, 0, -0.00998057, -8.72529e-10, -4.36265e-10, 3.167, 0.184125, 4.02107)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene26" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(4.36265e-10, 3.81395e-17, -0.00998057, 8.72529e-10, -0.00998057, 0, -0.00998057, -8.72529e-10, -4.36265e-10, 2.4621, 0.184125, 4.02107)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene27" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(4.36265e-10, 3.81395e-17, -0.00998057, 8.72529e-10, -0.00998057, 0, -0.00998057, -8.72529e-10, -4.36265e-10, 1.75835, 0.184125, 4.02107)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene28" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(4.36265e-10, 3.81395e-17, -0.00998057, 8.72529e-10, -0.00998057, 0, -0.00998057, -8.72529e-10, -4.36265e-10, 1.05345, 0.184125, 4.02107)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene29" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(4.36265e-10, 3.81395e-17, -0.00998057, 8.72529e-10, -0.00998057, 0, -0.00998057, -8.72529e-10, -4.36265e-10, 0.361841, 0.184125, 4.02107)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene30" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(4.36265e-10, 3.81395e-17, -0.00998057, 8.72529e-10, -0.00998057, 0, -0.00998057, -8.72529e-10, -4.36265e-10, -0.34306, 0.184125, 4.02107)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene31" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(4.36265e-10, 3.81395e-17, -0.00998057, 8.72529e-10, -0.00998057, 0, -0.00998057, -8.72529e-10, -4.36265e-10, -1.0468, 0.184125, 4.02107)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene32" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(4.36265e-10, 3.81395e-17, -0.00998057, 8.72529e-10, -0.00998057, 0, -0.00998057, -8.72529e-10, -4.36265e-10, -1.7517, 0.184125, 4.02107)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene33" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(4.36265e-10, 3.81395e-17, -0.00998057, 8.72529e-10, -0.00998057, 0, -0.00998057, -8.72529e-10, -4.36265e-10, -2.4595, 0.184125, 4.02107)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene34" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(4.36265e-10, 3.81395e-17, -0.00998057, 8.72529e-10, -0.00998057, 0, -0.00998057, -8.72529e-10, -4.36265e-10, -3.1644, 0.184125, 4.02107)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene35" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(4.36265e-10, 3.81395e-17, -0.00998057, 8.72529e-10, -0.00998057, 0, -0.00998057, -8.72529e-10, -4.36265e-10, -3.86814, 0.184125, 4.02107)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene36" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(4.36265e-10, 3.81395e-17, -0.00998057, 8.72529e-10, -0.00998057, 0, -0.00998057, -8.72529e-10, -4.36265e-10, -4.57305, 0.184125, 4.02107)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene37" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-1.30879e-09, -1.14418e-16, 0.00998057, 8.72529e-10, -0.00998057, 8.45387e-24, 0.00998057, 8.72529e-10, 1.30879e-09, -4.94396, 0.479546, 4.02108)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene38" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-1.30879e-09, -1.14418e-16, 0.00998057, 8.72529e-10, -0.00998057, 8.45387e-24, 0.00998057, 8.72529e-10, 1.30879e-09, -4.23906, 0.479546, 4.02108)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene39" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-1.30879e-09, -1.14418e-16, 0.00998057, 8.72529e-10, -0.00998057, 8.45387e-24, 0.00998057, 8.72529e-10, 1.30879e-09, -3.53532, 0.479546, 4.02108)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene40" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-1.30879e-09, -1.14418e-16, 0.00998057, 8.72529e-10, -0.00998057, 8.45387e-24, 0.00998057, 8.72529e-10, 1.30879e-09, -2.83042, 0.479546, 4.02108)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene41" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-1.30879e-09, -1.14418e-16, 0.00998057, 8.72529e-10, -0.00998057, 8.45387e-24, 0.00998057, 8.72529e-10, 1.30879e-09, -2.13881, 0.479546, 4.02108)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene42" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-1.30879e-09, -1.14418e-16, 0.00998057, 8.72529e-10, -0.00998057, 8.45387e-24, 0.00998057, 8.72529e-10, 1.30879e-09, -1.43391, 0.479546, 4.02108)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene43" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-1.30879e-09, -1.14418e-16, 0.00998057, 8.72529e-10, -0.00998057, 8.45387e-24, 0.00998057, 8.72529e-10, 1.30879e-09, -0.730164, 0.479546, 4.02108)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene44" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-1.30879e-09, -1.14418e-16, 0.00998057, 8.72529e-10, -0.00998057, 8.45387e-24, 0.00998057, 8.72529e-10, 1.30879e-09, -0.025263, 0.479546, 4.02108)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene45" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-1.30879e-09, -1.14418e-16, 0.00998057, 8.72529e-10, -0.00998057, 8.45387e-24, 0.00998057, 8.72529e-10, 1.30879e-09, 0.682536, 0.479546, 4.02108)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene46" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-1.30879e-09, -1.14418e-16, 0.00998057, 8.72529e-10, -0.00998057, 8.45387e-24, 0.00998057, 8.72529e-10, 1.30879e-09, 1.38744, 0.479546, 4.02108)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene47" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-1.30879e-09, -1.14418e-16, 0.00998057, 8.72529e-10, -0.00998057, 8.45387e-24, 0.00998057, 8.72529e-10, 1.30879e-09, 2.09118, 0.479546, 4.02108)
+metadata/_edit_group_ = true
+
+[node name="Sketchfab_Scene48" parent="." instance=ExtResource("3_7nebo")]
+transform = Transform3D(-1.30879e-09, -1.14418e-16, 0.00998057, 8.72529e-10, -0.00998057, 8.45387e-24, 0.00998057, 8.72529e-10, 1.30879e-09, 2.79608, 0.479546, 4.02108)
+metadata/_edit_group_ = true

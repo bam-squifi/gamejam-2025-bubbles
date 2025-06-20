@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://w0jayfege6gc"]
 
-[ext_resource type="Shader" path="res://shader/bubble.gdshader" id="1_awtih"]
+[ext_resource type="Shader" uid="uid://dld45v12qbru3" path="res://shader/bubble.gdshader" id="1_awtih"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_nkn8x"]
 
