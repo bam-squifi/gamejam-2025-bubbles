@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bmghek4m5evdf"
-path="res://.godot/imported/stone_brick.glb-7c1ac84b35ca6060ba56ab88601e347c.scn"
+uid="uid://ct6808ul428t4"
+path="res://.godot/imported/L_1_2_faesser.glb-342092c94f633bd84770ade43de87b35.scn"
 
 [deps]
 
-source_file="res://3D Models/stone_brick.glb"
-dest_files=["res://.godot/imported/stone_brick.glb-7c1ac84b35ca6060ba56ab88601e347c.scn"]
+source_file="res://3D Models/L_1_2_faesser.glb"
+dest_files=["res://.godot/imported/L_1_2_faesser.glb-342092c94f633bd84770ade43de87b35.scn"]
 
 [params]
 
