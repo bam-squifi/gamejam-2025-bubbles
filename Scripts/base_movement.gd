@@ -10,6 +10,7 @@ var tilt_z: float = 0.0
 var input_allowed := false
 
 func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	$LevelStartText/Ready.visible = true
 
 func _input(event: InputEvent):
@@ -25,6 +26,9 @@ func _input(event: InputEvent):
 		# Apply rotation to the CSGBox3D
 		self.rotation_degrees.x = tilt_x
 		self.rotation_degrees.z = tilt_z
+	
+	if event.is_action_pressed("ui_cancel"):
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
 func _on_level_start_time_timeout() -> void:

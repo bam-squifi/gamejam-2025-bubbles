@@ -45,11 +45,11 @@ dof_blur_far_distance = 29.4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.167826, 0, 0)
 
 [node name="Groundplane" parent="." instance=ExtResource("1_mct0m")]
-transform = Transform3D(3.5, 0, -8.74228e-08, 0, 0.25, 0, 3.0598e-07, 0, 1, 0, 0, 0)
 use_collision = true
 
 [node name="Ball" parent="." instance=ExtResource("2_kxaim")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08528, 0)
+input_ray_pickable = false
 mass = 1.0
 physics_material_override = SubResource("PhysicsMaterial_auons")
 
