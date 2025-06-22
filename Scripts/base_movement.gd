@@ -7,8 +7,9 @@ extends CSGBox3D  # Root node
 var tilt_x: float = 0.0
 var tilt_z: float = 0.0
 
+var input_allowed := false
 func _input(event: InputEvent):
-	if event is InputEventMouseMotion:
+	if input_allowed and event is InputEventMouseMotion:
 		# Map mouse motion to tilt
 		tilt_x += event.relative.y * sensitivity  # Mouse Y controls pitch (X-axis rotation)
 		tilt_z -= event.relative.x * sensitivity  # Mouse X controls roll (Z-axis rotation)
@@ -20,3 +21,7 @@ func _input(event: InputEvent):
 		# Apply rotation to the CSGBox3D
 		self.rotation_degrees.x = tilt_x
 		self.rotation_degrees.z = tilt_z
+
+
+func _on_level_start_time_timeout() -> void:
+	input_allowed = true
