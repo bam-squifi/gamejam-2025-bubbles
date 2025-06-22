@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpo34re43xfib"]
+
+[ext_resource type="Script" path="res://UI/level_start_text.gd" id="1_qng6r"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wv03v"]
+font_size = 111
+font_color = Color(0.136826, 0.136826, 0.136826, 1)
+
+[node name="LevelStartText" type="Node"]
+script = ExtResource("1_qng6r")
+
+[node name="Ready" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Ready"
+label_settings = SubResource("LabelSettings_wv03v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Go!" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 77.0
+offset_top = 1.0
+offset_right = 256.0
+offset_bottom = 153.0
+text = "Go!"
+label_settings = SubResource("LabelSettings_wv03v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GoTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="GoTimer" to="." method="_on_go_timer_timeout"]

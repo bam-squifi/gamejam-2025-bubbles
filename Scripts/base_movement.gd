@@ -8,6 +8,10 @@ var tilt_x: float = 0.0
 var tilt_z: float = 0.0
 
 var input_allowed := false
+
+func _ready() -> void:
+	$LevelStartText/Ready.visible = true
+
 func _input(event: InputEvent):
 	if input_allowed and event is InputEventMouseMotion:
 		# Map mouse motion to tilt
@@ -25,3 +29,5 @@ func _input(event: InputEvent):
 
 func _on_level_start_time_timeout() -> void:
 	input_allowed = true
+	$LevelStartText/Ready.visible = false
+	$"LevelStartText/Go!".visible = true
