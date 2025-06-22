@@ -334,15 +334,16 @@ shape = SubResource("ConvexPolygonShape3D_wao02")
 shape = SubResource("ConvexPolygonShape3D_j461g")
 
 [node name="Ball" parent="." instance=ExtResource("2_usunc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08528, 3.20184)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.80205, 1.08528, 3.20184)
 mass = 1.0
 physics_material_override = SubResource("PhysicsMaterial_auons")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.0765972, 0.997062, 0, -0.997062, 0.0765972, 0, 5, 0)
+transform = Transform3D(-3.95584e-08, -0.869745, 0.493502, 1.85962e-08, 0.493502, 0.869745, -1, 4.3583e-08, -3.34817e-09, 3.0043, 3.92318, 0)
 visible = false
 attributes = SubResource("CameraAttributesPractical_f11es")
 compositor = SubResource("Compositor_qkfpu")
+doppler_tracking = 2
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.0267352, 0.999643, 0, -0.999643, 0.0267352, 0, 5, 1.52471)
