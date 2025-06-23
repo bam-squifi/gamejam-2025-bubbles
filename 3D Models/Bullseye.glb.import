@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ct6808ul428t4"
-path="res://.godot/imported/L_1_2_faesser.glb-342092c94f633bd84770ade43de87b35.scn"
+uid="uid://cv0yxhsy2ql0a"
+path="res://.godot/imported/Bullseye.glb-e3d95bef735cfda824b36a0fa1836456.scn"
 
 [deps]
 
-source_file="res://3D Models/L_1_2_faesser.glb"
-dest_files=["res://.godot/imported/L_1_2_faesser.glb-342092c94f633bd84770ade43de87b35.scn"]
+source_file="res://3D Models/Bullseye.glb"
+dest_files=["res://.godot/imported/Bullseye.glb-e3d95bef735cfda824b36a0fa1836456.scn"]
 
 [params]
 

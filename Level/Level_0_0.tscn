@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://ux4eyhsk4xix"]
+[gd_scene load_steps=51 format=3 uid="uid://ux4eyhsk4xix"]
 
 [ext_resource type="PackedScene" uid="uid://c7g7odqucpoyi" path="res://Materials/groundplane.tscn" id="1_0f6pd"]
 [ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://Materials/ball.tscn" id="2_usunc"]
@@ -124,13 +124,6 @@ points = PackedVector3Array(0.00204762, 0.0302351, 0.00157106, -0.0022381, -0.00
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j461g"]
 points = PackedVector3Array(0.00204762, 0.0302351, 0.00157106, -0.0022381, -0.000238094, -0.00128539, -0.0022381, -0.000238094, 0.00109491, -0.0022381, 0.0302351, -0.00128539, 0.00204762, -0.000238094, -0.00128539, 0.00109491, 0.0302351, -0.0022381, 0.00157106, -0.000238094, 0.00204762, -0.00128539, 0.0302351, 0.00204762, -0.00128539, -0.000238094, -0.0022381, -0.00128539, -0.000238094, 0.00204762, 0.00204762, 0.0302351, -0.00128539, -0.0022381, 0.0302351, 0.00109491, 0.00109491, -0.000238094, -0.0022381, -0.00128539, 0.0302351, -0.0022381, 0.00157106, 0.0302351, 0.00204762, 0.00204762, -0.000238094, 0.00157106)
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_auons"]
-friction = 0.1
-
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_f11es"]
-
-[sub_resource type="Compositor" id="Compositor_qkfpu"]
-
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q3nuu"]
 sky_top_color = Color(0.250493, 0.447379, 0.770751, 1)
 sky_horizon_color = Color(0.412867, 0.693442, 0.85106, 1)
@@ -138,12 +131,12 @@ sky_cover_modulate = Color(0.403922, 1, 1, 1)
 ground_bottom_color = Color(0.141365, 0.266825, 0.262875, 1)
 sun_angle_max = 87.78
 
-[sub_resource type="Sky" id="Sky_ux0il"]
+[sub_resource type="Sky" id="Sky_rjtl3"]
 sky_material = SubResource("ProceduralSkyMaterial_q3nuu")
 
 [sub_resource type="Environment" id="Environment_nlnvi"]
 background_mode = 2
-sky = SubResource("Sky_ux0il")
+sky = SubResource("Sky_rjtl3")
 ambient_light_source = 3
 ambient_light_sky_contribution = 0.48
 ambient_light_energy = 0.52
@@ -160,6 +153,15 @@ volumetric_fog_length = 3.17
 dof_blur_far_distance = 29.4
 
 [sub_resource type="Compositor" id="Compositor_8cx67"]
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_rjtl3"]
+exposure_multiplier = 0.842
+frustum_focus_distance = 1273.16
+frustum_focal_length = 37.73
+frustum_near = 0.081
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_auons"]
+friction = 0.1
 
 [node name="Node3D" type="Node3D"]
 
@@ -333,18 +335,6 @@ shape = SubResource("ConvexPolygonShape3D_wao02")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Groundplane/L_1_2/Cylinder_FAF5F224/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_j461g")
 
-[node name="Ball" parent="." instance=ExtResource("2_usunc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.80205, 1.08528, 3.20184)
-mass = 1.0
-physics_material_override = SubResource("PhysicsMaterial_auons")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-3.95584e-08, -0.869745, 0.493502, 1.85962e-08, 0.493502, 0.869745, -1, 4.3583e-08, -3.34817e-09, 3.0043, 3.92318, 0)
-visible = false
-attributes = SubResource("CameraAttributesPractical_f11es")
-compositor = SubResource("Compositor_qkfpu")
-doppler_tracking = 2
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.0267352, 0.999643, 0, -0.999643, 0.0267352, 0, 5, 1.52471)
 shadow_enabled = true
@@ -353,5 +343,14 @@ shadow_enabled = true
 environment = SubResource("Environment_nlnvi")
 camera_attributes = SubResource("CameraAttributesPractical_kmh31")
 compositor = SubResource("Compositor_8cx67")
+
+[node name="Camera3D2" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.656613, 0.754228, 0, -0.754228, 0.656613, 0.177908, 8.38786, 7.99624)
+attributes = SubResource("CameraAttributesPhysical_rjtl3")
+
+[node name="Ball" parent="." instance=ExtResource("2_usunc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.80205, 1.08528, 3.20184)
+mass = 1.0
+physics_material_override = SubResource("PhysicsMaterial_auons")
 
 [editable path="Groundplane/L_1_2"]
