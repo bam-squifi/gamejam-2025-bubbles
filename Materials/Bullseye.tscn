@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxwicsk143oe5"]
+
+[ext_resource type="Script" uid="uid://b0ex0amk85bv1" path="res://Scripts/base_movement.gd" id="1_43eja"]
+[ext_resource type="PackedScene" uid="uid://dpo34re43xfib" path="res://UI/LevelStartText.tscn" id="2_eyuas"]
+[ext_resource type="PackedScene" uid="uid://cv0yxhsy2ql0a" path="res://3D Models/Bullseye.glb" id="2_jheyi"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="LevelStartText" parent="." instance=ExtResource("2_eyuas")]
+
+[node name="LevelStartTime" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Bullseye" parent="." instance=ExtResource("2_jheyi")]
+transform = Transform3D(3.136, 0, 3.08133e-06, 0, 3.133, 0, -2.84217e-14, 0, 3.133, 0.269804, 0.125, 0.0103865)
+script = ExtResource("1_43eja")
