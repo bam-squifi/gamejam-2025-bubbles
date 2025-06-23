@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ct6808ul428t4"
-path="res://.godot/imported/L_1_2_faesser.glb-342092c94f633bd84770ade43de87b35.scn"
+uid="uid://c26koeg4q87sw"
+path="res://.godot/imported/Bullseye.fbx-bae443ba0bddc6c206ced84b02ae11d9.scn"
 
 [deps]
 
-source_file="res://3D Models/L_1_2_faesser.glb"
-dest_files=["res://.godot/imported/L_1_2_faesser.glb-342092c94f633bd84770ade43de87b35.scn"]
+source_file="res://3D Models/Bullseye.fbx"
+dest_files=["res://.godot/imported/Bullseye.fbx-bae443ba0bddc6c206ced84b02ae11d9.scn"]
 
 [params]
 
@@ -28,10 +28,11 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-gltf/naming_version=1
-gltf/embedded_image_handling=1
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
