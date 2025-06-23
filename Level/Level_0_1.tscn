@@ -42,7 +42,6 @@ dof_blur_far_distance = 29.4
 [sub_resource type="Compositor" id="Compositor_8cx67"]
 
 [node name="Node3D" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.167826, 0, 0)
 
 [node name="Groundplane" parent="." instance=ExtResource("1_mct0m")]
 use_collision = true

@@ -1,4 +1,4 @@
-extends CSGBox3D  # Root node
+extends Node3D  # Root node
 
 # Variables for rotation control
 @export var sensitivity: float = 0.08  # Sensitivity of mouse movement
