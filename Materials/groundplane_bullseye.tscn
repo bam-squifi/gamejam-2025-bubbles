@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://88oyhw8g3xia"]
+
+[ext_resource type="Script" uid="uid://b0ex0amk85bv1" path="res://Scripts/base_movement.gd" id="1_50s10"]
+[ext_resource type="PackedScene" uid="uid://dpo34re43xfib" path="res://UI/LevelStartText.tscn" id="2_t17ts"]
+
+[node name="Groundplane" type="CSGBox3D"]
+transform = Transform3D(0.1, 0, -8.74229e-09, 0, 0.1, 0, 8.74229e-09, 0, 0.1, 0, 0, 0)
+size = Vector3(0.57959, 0.918945, 2.61971)
+script = ExtResource("1_50s10")
+
+[node name="LevelStartTime" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="LevelStartText" parent="." instance=ExtResource("2_t17ts")]
+
+[connection signal="timeout" from="LevelStartTime" to="." method="_on_level_start_time_timeout"]

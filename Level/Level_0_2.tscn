@@ -1,8 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://bbpqrsdk6ek3k"]
+[gd_scene load_steps=20 format=3 uid="uid://hdd64t5v1f5b"]
 
-[ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://Materials/ball.tscn" id="2_7nebo"]
-[ext_resource type="PackedScene" uid="uid://88oyhw8g3xia" path="res://Materials/groundplane_bullseye.tscn" id="3_1u46q"]
-[ext_resource type="PackedScene" uid="uid://cv0yxhsy2ql0a" path="res://3D Models/Bullseye.glb" id="4_k7uod"]
+[ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://Materials/ball.tscn" id="1_626r5"]
+[ext_resource type="PackedScene" uid="uid://88oyhw8g3xia" path="res://Materials/groundplane_bullseye.tscn" id="2_xi0n1"]
+[ext_resource type="PackedScene" uid="uid://cv0yxhsy2ql0a" path="res://3D Models/Bullseye.glb" id="3_obgjc"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_auons"]
 friction = 0.1
@@ -65,7 +65,7 @@ data = PackedVector3Array(-0.0014, 0, 0, 16.666, 0, 0, 16.5747, 1.7411, 0, 16.66
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Ball" parent="." instance=ExtResource("2_7nebo")]
+[node name="Ball" parent="." instance=ExtResource("1_626r5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08528, 0)
 mass = 1.0
 physics_material_override = SubResource("PhysicsMaterial_auons")
@@ -82,9 +82,9 @@ environment = SubResource("Environment_nlnvi")
 camera_attributes = SubResource("CameraAttributesPractical_kmh31")
 compositor = SubResource("Compositor_8cx67")
 
-[node name="Groundplane" parent="." instance=ExtResource("3_1u46q")]
+[node name="Groundplane" parent="." instance=ExtResource("2_xi0n1")]
 
-[node name="Bullseye" parent="Groundplane" instance=ExtResource("4_k7uod")]
+[node name="Bullseye" parent="Groundplane" instance=ExtResource("3_obgjc")]
 transform = Transform3D(42.4534, 0, 2.27374e-13, 0, 2.5, 0, -4.54747e-13, 0, 36.501, 0.606685, 4.55259, -1.41029)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Groundplane/Bullseye/Node/Object" index="0"]
