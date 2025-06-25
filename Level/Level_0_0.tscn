@@ -336,8 +336,9 @@ shape = SubResource("ConvexPolygonShape3D_wao02")
 shape = SubResource("ConvexPolygonShape3D_j461g")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.0267352, 0.999643, 0, -0.999643, 0.0267352, 0, 5, 1.52471)
+transform = Transform3D(1, 0, 0, 0, 0.236685, 0.971586, 0, -0.971586, 0.236685, 0, 5, 1.52471)
 shadow_enabled = true
+shadow_opacity = 0.54
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nlnvi")
