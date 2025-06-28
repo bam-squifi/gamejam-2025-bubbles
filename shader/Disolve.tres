@@ -1,17 +1,4 @@
-[gd_resource type="VisualShader" load_steps=8 format=3 uid="uid://b5k4y575syulu"]
-
-[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_uhnti"]
-parameter_name = "Base_Color"
-default_value_enabled = true
-default_value = Color(0.639216, 0, 0.133333, 1)
-
-[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_isxb8"]
-constant = 0.5
-
-[sub_resource type="VisualShaderNodeVaryingGetter" id="VisualShaderNodeVaryingGetter_hvmxo"]
-expanded_output_ports = [0]
-varying_name = "WorldPos"
-varying_type = 4
+[gd_resource type="VisualShader" load_steps=5 format=3 uid="uid://b5k4y575syulu"]
 
 [sub_resource type="VisualShaderNodeVaryingSetter" id="VisualShaderNodeVaryingSetter_ii7t2"]
 varying_name = "WorldPos"
@@ -33,7 +20,6 @@ render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_s
 // Varyings
 varying vec3 var_WorldPos;
 
-uniform vec4 Base_Color : source_color = vec4(0.639216, 0.000000, 0.133333, 1.000000);
 
 
 
@@ -55,30 +41,8 @@ void vertex() {
 
 
 }
-
-void fragment() {
-// ColorParameter:2
-	vec4 n_out2p0 = Base_Color;
-
-
-// VaryingGetter:4
-	vec3 n_out4p0 = var_WorldPos;
-	float n_out4p2 = n_out4p0.g;
-
-
-// FloatConstant:3
-	float n_out3p0 = 0.500000;
-
-
-// Output:0
-	ALBEDO = vec3(n_out2p0.xyz);
-	ALPHA = n_out4p2;
-	ALPHA_SCISSOR_THRESHOLD = n_out3p0;
-
-
-}
 "
-graph_offset = Vector2(-380.472, 3.99495)
+graph_offset = Vector2(-502.932, -43.9271)
 varyings/WorldPos = "0,4"
 nodes/vertex/0/position = Vector2(500, 20)
 nodes/vertex/2/node = SubResource("VisualShaderNodeVaryingSetter_ii7t2")
@@ -91,10 +55,3 @@ nodes/vertex/5/node = SubResource("VisualShaderNodeTransformVecMult_08dgg")
 nodes/vertex/5/position = Vector2(140, 420)
 nodes/vertex/connections = PackedInt32Array(3, 0, 5, 1, 4, 0, 5, 0, 5, 0, 2, 0)
 nodes/fragment/0/position = Vector2(920, 100)
-nodes/fragment/2/node = SubResource("VisualShaderNodeColorParameter_uhnti")
-nodes/fragment/2/position = Vector2(80, 100)
-nodes/fragment/3/node = SubResource("VisualShaderNodeFloatConstant_isxb8")
-nodes/fragment/3/position = Vector2(360, 740)
-nodes/fragment/4/node = SubResource("VisualShaderNodeVaryingGetter_hvmxo")
-nodes/fragment/4/position = Vector2(-180, 420)
-nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0, 3, 0, 0, 19, 4, 2, 0, 1)

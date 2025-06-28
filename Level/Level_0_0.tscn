@@ -167,6 +167,7 @@ friction = 0.1
 
 [node name="Groundplane" parent="." instance=ExtResource("1_0f6pd")]
 transform = Transform3D(-2.00641, 0, 1.06507e-07, 0, -0.095, 0, -1.75406e-07, 0, -1.2183, 0, 0, 0)
+size = Vector3(4, 1, 7)
 
 [node name="L_1_2" parent="Groundplane" instance=ExtResource("3_rjtl3")]
 transform = Transform3D(-3.98722, 0, -3.48573e-07, 0, -84.2105, 0, 5.74064e-07, 0, -6.56653, 0.452793, -0.81579, 0.110388)

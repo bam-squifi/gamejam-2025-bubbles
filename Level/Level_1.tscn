@@ -68,6 +68,7 @@ physics_material_override = SubResource("PhysicsMaterial_imfdv")
 
 [node name="Groundplane" parent="." instance=ExtResource("4_5c3jh")]
 transform = Transform3D(-3.00905, 0, 1.06507e-07, 0, -0.095, 0, -2.6306e-07, 0, -1.2183, 0.102246, 0.00746105, -2.33655)
+size = Vector3(4, 1, 7)
 material = SubResource("StandardMaterial3D_3u0fs")
 
 [node name="step" parent="Groundplane" instance=ExtResource("3_fv5xo")]

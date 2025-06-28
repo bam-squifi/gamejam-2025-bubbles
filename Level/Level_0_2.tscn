@@ -73,7 +73,6 @@ data = PackedVector3Array(-0.0014, 0, 0, 16.666, 0, 0, 16.5747, 1.7411, 0, 16.66
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tugui"]
 render_priority = 0
 shader = ExtResource("5_36p4j")
-shader_parameter/Base_Color = Color(0.639216, 0, 0.133333, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_bkrlt"]
 

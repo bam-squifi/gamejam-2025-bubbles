@@ -44,6 +44,7 @@ dof_blur_far_distance = 29.4
 
 [node name="Groundplane" parent="." instance=ExtResource("1_mct0m")]
 use_collision = true
+size = Vector3(4, 1, 7)
 
 [node name="Ball" parent="." instance=ExtResource("2_kxaim")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08528, 0)

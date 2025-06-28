@@ -56,7 +56,7 @@ compositor = SubResource("Compositor_11v5s")
 
 [node name="Groundplane" parent="." instance=ExtResource("1_t7f50")]
 use_collision = true
-size = Vector3(3.532, 0.609, 13.785)
+size = Vector3(4, 1, 14)
 
 [node name="Camera3D2" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.656613, 0.754228, 0, -0.754228, 0.656613, 0.0930705, 9.47314, 9.89655)
