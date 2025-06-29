@@ -42,7 +42,6 @@ void vertex() {
 
 }
 "
-graph_offset = Vector2(-502.932, -43.9271)
 varyings/WorldPos = "0,4"
 nodes/vertex/0/position = Vector2(500, 20)
 nodes/vertex/2/node = SubResource("VisualShaderNodeVaryingSetter_ii7t2")
