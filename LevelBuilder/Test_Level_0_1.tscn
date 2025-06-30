@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://d2dr3a1xh6kna"]
+[gd_scene load_steps=8 format=3 uid="uid://d2dr3a1xh6kna"]
 
 [ext_resource type="PackedScene" uid="uid://djbinfaue5mu3" path="res://Materials/ball.tscn" id="1_03mt1"]
 [ext_resource type="PackedScene" uid="uid://88oyhw8g3xia" path="res://Materials/groundplane_bullseye.tscn" id="2_j8v2i"]
-[ext_resource type="PackedScene" uid="uid://cddr05m083k7w" path="res://3D Models/Assets_full.fbx" id="3_j8v2i"]
+[ext_resource type="PackedScene" uid="uid://h8ixnxml7kwl" path="res://LevelBuilder/UI/builder_ui.tscn" id="3_fupyc"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_auons"]
 friction = 0.1
@@ -27,31 +27,16 @@ dof_blur_far_distance = 29.4
 
 [sub_resource type="Compositor" id="Compositor_8cx67"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_j8v2i"]
-_surfaces = [{
-"aabb": AABB(-0.528867, -0.528867, -0.0288675, 1.05773, 1.05773, 0.557735),
-"attribute_data": PackedByteArray("AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAACAPwAAAAAAAAAA"),
-"format": 34359742487,
-"index_count": 36,
-"index_data": PackedByteArray("AAACAAEAAgAAAAMABAAGAAUABgAEAAcACAAKAAkACgAIAAsADAAOAA0ADgAMAA8AEAASABEAEgAQABMAFAAWABUAFgAUABcA"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("3GMHP9xjBz+Qe+y83GMHv9xjBz+Qe+y83GMHv9xjB7+Qe+y83GMHP9xjB7+Qe+y83GMHP9xjBz/cYwc/3GMHP9xjB7/cYwc/3GMHv9xjB7/cYwc/3GMHv9xjBz/cYwc/3GMHP9xjB7/cYwc/3GMHP9xjB7+Qe+y83GMHv9xjB7+Qe+y83GMHv9xjB7/cYwc/3GMHP9xjBz/cYwc/3GMHP9xjBz+Qe+y83GMHP9xjB7+Qe+y83GMHP9xjB7/cYwc/3GMHv9xjBz/cYwc/3GMHv9xjBz+Qe+y83GMHP9xjBz+Qe+y83GMHP9xjBz/cYwc/3GMHv9xjB7/cYwc/3GMHv9xjB7+Qe+y83GMHv9xjBz+Qe+y83GMHv9xjBz/cYwc//////wAA/7//////AAD/v/////8AAP+//////wAA/7//f/9/////v/9//3////+//3//f////7//f/9/////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+///8AgACA/////wCAAID/////AIAAgP////8AgACA//8AgP//AAD/vwCA//8AAP+/AID//wAA/78AgP//AAD/vwAAAID/fwCAAAAAgP9/AIAAAACA/38AgAAAAID/fwCA")
-}]
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2x47t"]
-points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, 0, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0.5, -0.5, -0.5, 0)
-
 [node name="Node3D" type="Node3D"]
 
 [node name="Ball" parent="." instance=ExtResource("1_03mt1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.99376, 0)
+visible = false
 mass = 1.0
 physics_material_override = SubResource("PhysicsMaterial_auons")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -3.49134e-05, 1, 0, -1, -3.49134e-05, 0.0494161, 7.18029, -0.138975)
+transform = Transform3D(1, 0, 0, 0, -3.49134e-05, 1, 0, -1, -3.49134e-05, -3.48944, 6.8641, -0.00298962)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.679877, 0.733327, 0, -0.733327, 0.679877, 0, 19.7738, 19.9962)
@@ -65,49 +50,9 @@ compositor = SubResource("Compositor_8cx67")
 [node name="Groundplane" parent="." instance=ExtResource("2_j8v2i")]
 transform = Transform3D(10, 0, -8.74229e-07, 0, 0.5, 0, 8.74229e-07, 0, 10, 0, 0, 0)
 size = Vector3(1, 1, 1)
+script = null
 
-[node name="Elements" type="Node3D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Assets_full" parent="Elements" instance=ExtResource("3_j8v2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29763, 0.239796)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Elements/Assets_full/Box_1x1x0,5" index="0"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Elements/Assets_full/Box_1x1x0,5" index="1"]
-mesh = SubResource("ArrayMesh_j8v2i")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Elements/Assets_full"]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -1.26431, -5.72205e-08, 1.49819)
-shape = SubResource("ConvexPolygonShape3D_2x47t")
-
-[node name="Box_1x2x0_5" parent="Elements/Assets_full" index="2"]
-visible = false
-
-[node name="Ramp_1" parent="Elements/Assets_full" index="3"]
-visible = false
-
-[node name="Ramp_002" parent="Elements/Assets_full" index="4"]
-visible = false
-
-[node name="Plattform_2x1" parent="Elements/Assets_full" index="5"]
-visible = false
-
-[node name="Plattform_1x1" parent="Elements/Assets_full" index="6"]
-visible = false
-
-[node name="Curve_90" parent="Elements/Assets_full" index="7"]
-visible = false
-
-[node name="Curve_180" parent="Elements/Assets_full" index="8"]
-visible = false
-
-[node name="Bumper_hinge" parent="Elements/Assets_full" index="9"]
-visible = false
-
-[node name="Bumper_full" parent="Elements/Assets_full" index="10"]
-visible = false
-
-[node name="Curve_180_Banking" parent="Elements/Assets_full" index="11"]
-visible = false
-
-[editable path="Elements/Assets_full"]
+[node name="BuilderUi" parent="CanvasLayer" instance=ExtResource("3_fupyc")]
+offset_right = 1.0
