@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5677s0c7vlj4"]
+
+[ext_resource type="PackedScene" uid="uid://cddr05m083k7w" path="res://3D Models/Assets_full.fbx" id="1_hp3xl"]
+[ext_resource type="Texture2D" uid="uid://p7tynnapdke1" path="res://LevelBuilder/UI/Images/box.png" id="2_lvjkr"]
+
+[sub_resource type="SystemFont" id="SystemFont_amlt0"]
+
+[sub_resource type="Theme" id="Theme_hp3xl"]
+default_font = SubResource("SystemFont_amlt0")
+
+[sub_resource type="PlaceholderMesh" id="PlaceholderMesh_lvjkr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_amlt0"]
+
+[node name="BuilderElementTileUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -950.0
+offset_bottom = -450.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+tooltip_text = "Element #"
+mouse_default_cursor_shape = 6
+theme = SubResource("Theme_hp3xl")
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VBoxContainer/Panel"]
+mesh = SubResource("PlaceholderMesh_lvjkr")
+
+[node name="Assets_full" parent="VBoxContainer/Panel/MeshInstance3D" instance=ExtResource("1_hp3xl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.566581, 0, -0.359964)
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 173.0
+texture = ExtResource("2_lvjkr")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Element #"
+label_settings = SubResource("LabelSettings_amlt0")
+vertical_alignment = 2
