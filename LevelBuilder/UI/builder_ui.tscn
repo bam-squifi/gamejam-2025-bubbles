@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://h8ixnxml7kwl"]
+[gd_scene load_steps=5 format=3 uid="uid://h8ixnxml7kwl"]
 
 [ext_resource type="Texture2D" uid="uid://p7tynnapdke1" path="res://LevelBuilder/UI/Images/box.png" id="1_uixd5"]
+[ext_resource type="Script" uid="uid://b4troy32q6l3d" path="res://LevelBuilder/UI/item_list.gd" id="2_s17pm"]
 
 [sub_resource type="FontFile" id="FontFile_uixd5"]
 cache/0/16/0/ascent = 0.0
@@ -58,3 +59,6 @@ item_2/text = "box"
 item_2/icon = ExtResource("1_uixd5")
 item_3/text = "box"
 item_3/icon = ExtResource("1_uixd5")
+script = ExtResource("2_s17pm")
+
+[connection signal="item_selected" from="Panel/VBoxContainer/ItemList" to="Panel/VBoxContainer/ItemList" method="_on_item_selected"]
