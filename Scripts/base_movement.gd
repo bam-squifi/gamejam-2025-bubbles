@@ -1,8 +1,8 @@
 extends Node3D  # Root node
 
 # Variables for rotation control
-@export var sensitivity: float = 0.08  # Sensitivity of mouse movement
-@export var max_tilt_angle: float = 45.0  # Maximum tilt angle in degrees
+@export var sensitivity: float = 0.005  # Sensitivity of mouse movement
+@export var max_tilt_angle: float = 30.0  # Maximum tilt angle in degrees
 # To track current tilt angles
 var tilt_x: float = 0.0
 var tilt_z: float = 0.0
