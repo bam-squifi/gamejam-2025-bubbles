@@ -15,7 +15,7 @@ script = ExtResource("1_hutkm")
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 4.26326e-13, 0, 1, 0, -6.53699e-13, 0, 1, 0.00161661, 0, -0.0164499)
+transform = Transform3D(1, 0, 4.26326e-13, 0, 1, 0, -7.10543e-13, 0, 1, 0.00161661, 0, -0.0164499)
 shape = SubResource("BoxShape3D_lqoaq")
 
 [node name="LevelStartTime" type="Timer" parent="."]
